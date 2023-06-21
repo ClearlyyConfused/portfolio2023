@@ -6,8 +6,6 @@ import { useState } from 'react';
 function NavBar() {
 	const [light, setLight] = useState(true);
 
-	console.log(light);
-
 	return (
 		<nav>
 			<button>Projects</button>

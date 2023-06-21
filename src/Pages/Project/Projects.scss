@@ -2,13 +2,25 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	gap: 25px;
 
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		section {
+			width: 80% !important;
+		}
+		.right-column {
+			h1 {
+				display: none; // to remove h1 spacing from right column
+			}
+		}
+	}
 	section {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		width: 35%; // should be the same to evenly size page into 2 sections
+		width: 40%; // should be the same to evenly size page into 2 sections
 		border-radius: 10px;
 		overflow: hidden;
 
