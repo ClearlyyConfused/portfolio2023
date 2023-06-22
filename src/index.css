@@ -20,6 +20,7 @@ body {
 	padding-bottom: 150px;
 
 	transition: background-image 10s;
+	background-attachment: fixed;
 
 	/* gradient and svg */
 	background-image: linear-gradient(

@@ -12,7 +12,7 @@ function Project({ image, projectName, description, technologies }) {
 			<img src={image} alt="" srcset="" />
 
 			{/* black gradient when hovered */}
-			<div style={{ opacity: displayDiscription ? 0.5 : 0 }} className="overlay"></div>
+			<div style={{ opacity: displayDiscription ? 1 : 0.2 }} className="overlay"></div>
 
 			{displayDiscription ? (
 				<div className="project-info">

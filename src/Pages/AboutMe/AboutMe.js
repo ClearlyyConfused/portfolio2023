@@ -26,6 +26,7 @@ function AboutMe() {
 						<li>MongoDB</li>
 						<li>SQL</li>
 						<li>GitHub/Git</li>
+						<li>Jest</li>
 					</ul>
 				</div>
 			</section>

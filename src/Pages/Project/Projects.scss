@@ -33,9 +33,11 @@
 			position: relative;
 
 			img {
+				// images should be 1440/1000 in devtools
 				border-radius: 10px;
 				width: 100%;
-				height: auto;
+				height: 350px;
+				object-fit: cover;
 			}
 			.overlay {
 				position: absolute;
@@ -43,7 +45,7 @@
 				bottom: 0;
 				height: 99%; // to line up with image
 				width: 100%;
-				background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 212, 255, 0) 100%);
+				background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
 				transition: 0.2s opacity;
 				margin-bottom: 4px; // to line up with image
 			}
