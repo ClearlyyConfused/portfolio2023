@@ -16,7 +16,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 100px; /* gap between sections */
+	gap: 120px; /* gap between sections */
 	padding-bottom: 150px;
 
 	transition: background-image 10s;
@@ -26,7 +26,7 @@ body {
 			80deg,
 			rgba(252, 247, 245, 0) 0%,
 			rgba(252, 247, 245, 0) 0%,
-			rgba(247, 255, 134, 0.1) 100%
+			rgba(247, 255, 134, 0.07) 100%
 		),
 		url('./images/background.svg');
 }
@@ -42,7 +42,7 @@ body {
 		80deg,
 		rgba(252, 247, 245, 0) 0%,
 		rgba(252, 247, 245, 0) 0%,
-		rgba(247, 255, 134, 0.15) 100%
+		rgba(247, 255, 134, 0.1) 100%
 	);
 	z-index: -1;
 	animation: 10s infinite alternate ease-in-out opacity;
