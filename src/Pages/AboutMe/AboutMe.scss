@@ -1,3 +1,5 @@
+@use '../../variables';
+
 .about-me {
 	width: 100%;
 	display: flex;
@@ -9,11 +11,11 @@
 		flex-direction: column;
 	}
 	section {
-		width: 40%; // should be the same to evenly size page into 2 sections
+		width: variables.$column-width; // should be the same to evenly size page into 2 sections
 		border-radius: 10px;
 		overflow: hidden;
-		@media (max-width: 1024px) {
-			width: 80%;
+		@media (max-width: variables.$mobile-layout-width) {
+			width: variables.$column-width-mobile;
 		}
 	}
 	.info {
@@ -27,9 +29,12 @@
 		}
 		.technologies {
 			display: flex;
+			flex-wrap: wrap;
 			width: 100%;
-			gap: 50px;
+
 			ul {
+				padding: 0px 50px;
+				margin: 0;
 				li {
 					margin-bottom: 10px;
 				}

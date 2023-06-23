@@ -1,3 +1,5 @@
+@use '../../variables';
+
 .resume {
 	display: flex;
 	justify-content: center;
@@ -8,8 +10,11 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: calc(80% + 25px); // 25px to account for gap above
+		width: calc((variables.$column-width * 2) + variables.$project-column-gap);
 
+		@media (max-width: variables.$mobile-layout-width) {
+			width: variables.$column-width-mobile;
+		}
 		h1 {
 			margin-right: auto;
 			font-size: 60px;

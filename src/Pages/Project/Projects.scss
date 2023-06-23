@@ -1,14 +1,16 @@
+@use '../../variables';
+
 .projects {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 25px;
+	gap: $project-column-gap;
 
-	@media (max-width: 1024px) {
+	@media (max-width: variables.$mobile-layout-width) {
 		flex-direction: column;
 		section {
-			width: 80% !important;
+			width: variables.$column-width-mobile !important;
 		}
 		.right-column {
 			h1 {
@@ -21,7 +23,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		width: 40%; // should be the same to evenly size page into 2 sections
+		width: variables.$column-width; // should be the same to evenly size page into 2 sections
 		border-radius: 10px;
 		overflow: hidden;
 
