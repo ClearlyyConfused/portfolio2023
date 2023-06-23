@@ -1,0 +1,1 @@
+.resume{display:flex;justify-content:center;width:100%}.resume section{display:flex;flex-direction:column;justify-content:center;align-items:center;width:calc(80% + 25px)}.resume section h1{margin-right:auto;font-size:60px}.resume section img{border:1px solid #000;height:auto;width:100%;max-width:600px}

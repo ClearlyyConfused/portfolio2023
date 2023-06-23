@@ -48,6 +48,10 @@
 				background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
 				transition: 0.2s opacity;
 				margin-bottom: 4px; // to line up with image
+
+				&:hover {
+					cursor: pointer;
+				}
 			}
 			.project-info {
 				padding: 30px;
@@ -56,6 +60,10 @@
 				margin-top: auto;
 				animation: project-animation 0.3s;
 				color: white;
+
+				&:hover {
+					cursor: pointer;
+				}
 				p {
 					margin-top: 0;
 				}
@@ -71,10 +79,6 @@
 						font-weight: bold;
 					}
 				}
-			}
-
-			&:hover {
-				cursor: pointer;
 			}
 		}
 	}
