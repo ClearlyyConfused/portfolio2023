@@ -8,9 +8,15 @@ function NavBar() {
 
 	return (
 		<nav>
-			<button>Projects</button>
-			<button>Resume</button>
-			<button>Contact</button>
+			<button>
+				<a href="#projects">Projects</a>
+			</button>
+			<button>
+				<a href="#resume">Resume</a>
+			</button>
+			<button>
+				<a href="#contact">Contact</a>
+			</button>
 			<div className="img-container">
 				<button>
 					<img

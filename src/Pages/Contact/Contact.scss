@@ -1,0 +1,15 @@
+@use '../../variables';
+
+.contact {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	section {
+		width: calc((variables.$column-width * 2) + variables.$project-column-gap);
+
+		h1 {
+			font-size: 60px;
+		}
+	}
+}

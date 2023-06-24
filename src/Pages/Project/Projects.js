@@ -11,7 +11,7 @@ import Project from './Project';
 
 function Projects() {
 	return (
-		<main className="projects">
+		<main className="projects" id="projects">
 			<section className="left-column">
 				<h1>Projects.📋</h1>
 				<Project
@@ -73,7 +73,7 @@ function Projects() {
 					image={battleShip}
 					projectName={'BattleShip'}
 					description={`Simple game of battleship vs an AI. AI has difficulty setting that makes it more/less likely to hit the user's ship.`}
-					technologies={['HTML', 'CSS', 'JavaScript']}
+					technologies={['HTML', 'CSS', 'JavaScript', 'Jest']}
 				/>
 			</section>
 		</main>

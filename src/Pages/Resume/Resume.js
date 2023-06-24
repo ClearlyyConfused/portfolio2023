@@ -4,7 +4,7 @@ import resumePdf from './ResumeV1.pdf';
 
 function Resume() {
 	return (
-		<main className="resume">
+		<main className="resume" id="resume">
 			<section>
 				<h1>Resume.📄</h1>
 				<img src={resumePng} alt="Resume" />

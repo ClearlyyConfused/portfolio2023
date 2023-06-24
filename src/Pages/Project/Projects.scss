@@ -5,7 +5,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: $project-column-gap;
+	gap: variables.$project-column-gap;
 
 	@media (max-width: variables.$mobile-layout-width) {
 		flex-direction: column;
@@ -19,7 +19,8 @@
 		}
 	}
 
-	section {
+	.left-column,
+	.right-column {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
@@ -91,6 +92,30 @@
 			visibility: hidden;
 		}
 	}
+
+	.project-info-screen {
+		top: 0;
+		left: 0;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		z-index: 3;
+		display: flex;
+		background-color: rgba(0, 0, 0, 0.8);
+
+		.blank-space {
+			min-width: 58%;
+			height: 100%;
+		}
+		.info {
+			min-width: 42%;
+			height: 100%;
+			background-color: white;
+			overflow-y: scroll;
+			margin-left: 0px;
+			animation: slide-in 0.5s ease-out;
+		}
+	}
 }
 
 @keyframes project-animation {
@@ -101,5 +126,14 @@
 	100% {
 		opacity: 1;
 		padding-bottom: 30px;
+	}
+}
+
+@keyframes slide-in {
+	0% {
+		margin-left: 100%;
+	}
+	100% {
+		margin-left: 0px;
 	}
 }
