@@ -1,4 +1,4 @@
-function ProjectInfo({ image, projectName, description, technologies, setDisplayInfo }) {
+function ProjectInfo({ project, setDisplayInfo }) {
 	return (
 		<div className="project-info-screen">
 			<div
@@ -15,13 +15,13 @@ function ProjectInfo({ image, projectName, description, technologies, setDisplay
 				>
 					X
 				</button>
-				<img src={image} alt={projectName} />
-				<h1>{projectName}</h1>
+				<img src={project.image} alt={project.projectName} />
+				<h1>{project.projectName}</h1>
 				<h2>About</h2>
-				<p>{description}</p>
+				<p>{project.description}</p>
 				<h2>Technologies</h2>
 				<div className="technologies">
-					{technologies.map((tech) => {
+					{project.technologies.map((tech) => {
 						return <p>{tech}</p>;
 					})}
 				</div>

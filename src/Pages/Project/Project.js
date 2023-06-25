@@ -1,6 +1,78 @@
 import { useState, useEffect } from 'react';
 import ProjectInfo from './ProjectInfo';
 
+function Project({ project }) {
+	// display project's description
+	const [displayDescription, setDisplayDescription] = useState(false);
+	// see if mouse is in the project panel
+	const [inProject, setInProject] = useState(false);
+	// display full project info
+	const [displayInfo, setDisplayInfo] = useState(false);
+
+	useEffect(() => {
+		if (displayInfo) {
+			// if displaying full project info:
+			// hide the full page scrollbar, set padding to offset scrollbar being hidden, display project description
+			const body = document.getElementsByTagName('body')[0];
+			body.style.paddingRight = getScrollBarWidth() + 'px';
+			body.style.overflowY = 'hidden';
+			setDisplayDescription(true);
+		} else {
+			// if not displaying full project info
+			// undo above, if mouse is not in the project panel then hide project description
+			const body = document.getElementsByTagName('body')[0];
+			body.style.paddingRight = '0px';
+			body.style.overflowY = 'scroll';
+			if (!inProject) {
+				setDisplayDescription(false);
+			}
+		}
+	}, [displayInfo, displayDescription, inProject]);
+
+	function mouseEntersProject() {
+		setDisplayDescription(true);
+		setInProject(true);
+	}
+
+	function mouseLeavesProject() {
+		setDisplayDescription(false);
+		setInProject(false);
+	}
+
+	return (
+		<div className="project">
+			<img src={project.image} alt="" srcset="" />
+
+			{/* black gradient when hovered */}
+			<div
+				onClick={() => setDisplayInfo(true)}
+				onMouseEnter={mouseEntersProject}
+				onMouseLeave={mouseLeavesProject}
+				style={{ opacity: displayDescription ? 1 : 0.2 }}
+				className="overlay"
+			></div>
+
+			{/* display description when project panel hovered */}
+			<div
+				onClick={() => setDisplayInfo(true)}
+				onMouseEnter={mouseEntersProject}
+				onMouseLeave={mouseLeavesProject}
+				className={`project-info ${displayDescription ? 'active' : ''}`}
+			>
+				<h2>{project.projectName}</h2>
+				<p>{project.description}</p>
+				<div className="technologies">
+					{project.technologies.map((tech) => {
+						return <p>{tech}</p>;
+					})}
+				</div>
+			</div>
+
+			{displayInfo ? <ProjectInfo project={project} setDisplayInfo={setDisplayInfo} /> : ''}
+		</div>
+	);
+}
+
 function getScrollBarWidth() {
 	var inner = document.createElement('p');
 	inner.style.width = '100%';
@@ -25,87 +97,6 @@ function getScrollBarWidth() {
 	document.body.removeChild(outer);
 
 	return w1 - w2;
-}
-
-function Project({ image, projectName, description, technologies }) {
-	const [displayDescription, setDisplayDescription] = useState(false);
-	const [displayInfo, setDisplayInfo] = useState(false);
-	const [inP, setInP] = useState(false);
-
-	useEffect(() => {
-		if (displayInfo) {
-			const body = document.getElementsByTagName('body')[0];
-			body.style.paddingRight = getScrollBarWidth() + 'px';
-			body.style.overflowY = 'hidden';
-			setDisplayDescription(true);
-		} else {
-			const body = document.getElementsByTagName('body')[0];
-			body.style.paddingRight = '0px';
-			body.style.overflowY = 'scroll';
-			if (!inP) {
-				setDisplayDescription(false);
-			}
-		}
-	}, [displayInfo, displayDescription, inP]);
-
-	return (
-		<div className="project">
-			<img src={image} alt="" srcset="" />
-
-			{/* black gradient when hovered */}
-			<div
-				onClick={() => setDisplayInfo(true)}
-				onMouseEnter={() => {
-					setDisplayDescription(true);
-					setInP(true);
-				}}
-				onMouseLeave={() => {
-					setDisplayDescription(false);
-					setInP(false);
-				}}
-				style={{ opacity: displayDescription ? 1 : 0.2 }}
-				className="overlay"
-			></div>
-
-			{displayDescription ? (
-				// display description when project panel hovered
-				<div
-					onClick={() => setDisplayInfo(true)}
-					onMouseEnter={() => {
-						setDisplayDescription(true);
-						setInP(true);
-					}}
-					onMouseLeave={() => {
-						setDisplayDescription(false);
-						setInP(false);
-					}}
-					className="project-info"
-				>
-					<h2>{projectName}</h2>
-					<p>{description}</p>
-					<div className="technologies">
-						{technologies.map((tech) => {
-							return <p>{tech}</p>;
-						})}
-					</div>
-				</div>
-			) : (
-				''
-			)}
-
-			{displayInfo ? (
-				<ProjectInfo
-					image={image}
-					projectName={projectName}
-					description={description}
-					technologies={technologies}
-					setDisplayInfo={setDisplayInfo}
-				/>
-			) : (
-				''
-			)}
-		</div>
-	);
 }
 
 export default Project;
