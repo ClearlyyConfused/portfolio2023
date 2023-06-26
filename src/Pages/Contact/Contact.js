@@ -9,12 +9,36 @@ function Contact() {
 		document.getElementById('message').value = '';
 	});
 
+	function handleSubmit(event) {
+		event.preventDefault();
+
+		const formData = new FormData(document.getElementById('contact-form'));
+		const object = Object.fromEntries(formData);
+		const json = JSON.stringify(object);
+
+		fetch('https://api.web3forms.com/submit', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json',
+			},
+			body: json,
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				event.target.elements.name.value = '';
+				event.target.elements.email.value = '';
+				event.target.elements.message.value = '';
+				alert('Sent Successfully');
+			});
+	}
+
 	return (
 		<main className="contact" id="contact">
 			<section>
 				<h1>Contact.</h1>
 				<p>Email me at doanl7@mcmaster.ca</p>
-				<form action="https://api.web3forms.com/submit" method="POST">
+				<form id="contact-form" onSubmit={handleSubmit} method="POST">
 					<input type="hidden" name="access_key" value={process.env.REACT_APP_EMAIL_KEY} />
 					<div>
 						<label htmlFor="name">Name:</label>
@@ -31,7 +55,6 @@ function Contact() {
 					<div class="h-captcha" data-captcha="true"></div>
 					<button type="submit">Send Message</button>
 				</form>
-				<script src="https://web3forms.com/client/script.js" async defer></script>
 			</section>
 		</main>
 	);
