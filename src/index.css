@@ -16,6 +16,7 @@ body {
 	/* for background to not scroll along with page */
 	background-attachment: fixed;
 
+	overscroll-behavior-y: contain;
 	position: relative !important;
 }
 
