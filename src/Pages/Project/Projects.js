@@ -1,4 +1,5 @@
 import './Projects.css';
+// images should be 1440/1000 in devtools
 import offcampusMcmaster from '../../images/offcampus-mcmaster.png';
 import premierEase from '../../images/premier-ease.png';
 import blabberBox from '../../images/blabberbox.png';

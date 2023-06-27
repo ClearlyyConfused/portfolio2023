@@ -2,11 +2,11 @@
 $project-info-panel-width: 550px;
 
 .projects {
-	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: variables.$project-column-gap;
+	width: 100%;
 
 	@media (max-width: variables.$mobile-layout-width) {
 		flex-direction: column;
@@ -15,8 +15,15 @@ $project-info-panel-width: 550px;
 		}
 		.right-column {
 			h1 {
-				display: none; // to remove h1 spacing from right column
+				display: none; // to remove h1 space from right column when in mobile layout
 			}
+		}
+	}
+
+	.right-column {
+		> h1 {
+			// to hide the 2nd h1 and keep both columns balanced
+			visibility: hidden;
 		}
 	}
 
@@ -25,19 +32,18 @@ $project-info-panel-width: 550px;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		width: variables.$column-width; // should be the same to evenly size page into 2 sections
 		border-radius: 10px;
+		width: variables.$column-width;
 		overflow: hidden;
 
 		h1 {
-			font-size: 60px;
 			margin: 0;
+			font-size: 60px;
 		}
 		.project {
 			position: relative;
 
 			img {
-				// images should be 1440/1000 in devtools
 				border-radius: 10px;
 				width: 100%;
 				height: 350px;
@@ -45,13 +51,13 @@ $project-info-panel-width: 550px;
 			}
 			.overlay {
 				position: absolute;
-				border-radius: 10px;
 				bottom: 0;
-				height: 99%; // to line up with image
-				width: 100%;
-				background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
 				transition: 0.2s opacity;
 				margin-bottom: 4px; // to line up with image
+				border-radius: 10px;
+				background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+				width: 100%;
+				height: 99%; // to line up with image
 
 				&:hover {
 					cursor: pointer;
@@ -64,13 +70,13 @@ $project-info-panel-width: 550px;
 				margin-bottom: 0px;
 			}
 			.project-info {
-				padding: 30px;
 				position: absolute;
 				bottom: 0;
-				color: white;
 				opacity: 0;
-				margin-bottom: -10px;
 				transition: 0.3s all;
+				margin-bottom: -10px;
+				padding: 30px;
+				color: white;
 
 				&:hover {
 					cursor: pointer;
@@ -80,54 +86,51 @@ $project-info-panel-width: 550px;
 				}
 				// limit project description to 2 lines then ellipsis
 				> p {
-					overflow: hidden;
-					text-overflow: ellipsis;
-					display: -webkit-box;
 					-webkit-line-clamp: 2;
 					-webkit-box-orient: vertical;
+					display: -webkit-box;
+					overflow: hidden;
+					text-overflow: ellipsis;
 				}
 				p {
 					margin-top: 0;
 				}
 				.technologies {
 					display: flex;
-					flex-wrap: wrap;
 					column-gap: 10px;
 					row-gap: 5px;
+					flex-wrap: wrap;
 
 					p {
-						font-size: 12px;
+						margin-bottom: 5px;
+						border-radius: 30px;
 						background-color: gray;
 						padding: 6px 10px;
-						border-radius: 30px;
 						font-weight: bold;
-						margin-bottom: 5px;
+						font-size: 12px;
 					}
 				}
 			}
 		}
 	}
 
-	.right-column {
-		> h1 {
-			// to hide the 2nd h1 and keep both columns balanced
-			visibility: hidden;
-		}
-	}
+	// -------------------------------------------------------
 
 	.project-info-screen {
+		display: flex;
+		position: fixed;
 		top: 0;
 		left: 0;
-		position: fixed;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, 0.8);
 		width: 100vw;
 		height: 100vh;
-		z-index: 3;
-		display: flex;
-		background-color: rgba(0, 0, 0, 0.8);
 
 		@media (max-width: $project-info-panel-width) {
+			// have whole screen be scrollable in mobile layout
+			// prevents accidentally scrolling the background
+			background-color: rgba(0, 0, 0, 0.8);
 			overflow-y: scroll;
-			background-color: rgba(0, 0, 0, 0);
 			overscroll-behavior-y: contain;
 		}
 
@@ -140,37 +143,37 @@ $project-info-panel-width: 550px;
 		}
 		.info-panel {
 			display: flex;
+			position: absolute;
+			right: 0;
 			flex-direction: column;
 			gap: 20px;
+			animation: slide-in 0.5s ease-out;
+			box-sizing: border-box;
+			background-color: white;
 			padding: 30px 20px;
 			padding-bottom: 50px;
 			min-width: $project-info-panel-width;
 			max-width: $project-info-panel-width;
 			height: 100%;
-			background-color: white;
 			overflow-y: scroll;
-			box-sizing: border-box;
-			animation: slide-in1 0.5s ease-out;
-			position: absolute;
-			right: 0;
 
 			@media (max-width: $project-info-panel-width) {
-				left: 0;
-				overflow-y: auto;
-				animation: slide-in2 0.5s ease-out;
-				height: fit-content;
+				animation: slide-in 0.5s ease-out;
 				padding-bottom: 150px;
+				max-width: 100vw;
+				height: fit-content;
+				overflow-y: auto;
 			}
 
 			button {
-				background: none;
 				border: 2px solid gray;
-				color: gray;
+				border-radius: 25px;
+				background: none;
 				min-width: 25px;
+				max-width: 25px;
 				min-height: 25px;
 				max-height: 25px;
-				max-width: 25px;
-				border-radius: 25px;
+				color: gray;
 				line-height: 20px;
 				&:hover {
 					cursor: pointer;
@@ -190,8 +193,8 @@ $project-info-panel-width: 550px;
 				min-height: fit-content;
 
 				h1 {
-					font-size: 22px;
 					margin: 0;
+					font-size: 22px;
 				}
 
 				// groups labels to info
@@ -204,8 +207,8 @@ $project-info-panel-width: 550px;
 						margin: 0;
 					}
 					h2 {
-						font-size: 18px;
 						margin: 0;
+						font-size: 18px;
 					}
 					.technologies {
 						display: flex;
@@ -213,20 +216,20 @@ $project-info-panel-width: 550px;
 						gap: 10px;
 
 						p {
-							font-size: 12px;
+							margin-bottom: 5px;
+							border-radius: 5px;
 							background-color: #efe9e4;
 							padding: 6px 10px;
-							border-radius: 5px;
 							font-weight: bold;
-							margin-bottom: 5px;
+							font-size: 12px;
 						}
 					}
 					a {
 						margin: 0;
-						color: inherit;
 						overflow: hidden;
-						text-overflow: ellipsis;
+						color: inherit;
 						text-decoration: none;
+						text-overflow: ellipsis;
 						&:hover {
 							text-decoration: underline;
 						}
@@ -245,20 +248,11 @@ $project-info-panel-width: 550px;
 	}
 }
 
-@keyframes slide-in1 {
+@keyframes slide-in {
 	0% {
-		right: -1500px;
+		right: -99vw;
 	}
 	100% {
 		right: 0px;
-	}
-}
-
-@keyframes slide-in2 {
-	0% {
-		left: 1500px;
-	}
-	100% {
-		left: 0px;
 	}
 }
