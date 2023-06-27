@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import ProjectInfo from './ProjectInfo';
+import ProjectInfoScreen from './ProjectInfoScreen';
 
 function Project({ project }) {
 	// display project's description
@@ -68,7 +68,7 @@ function Project({ project }) {
 				</div>
 			</div>
 
-			{displayInfo ? <ProjectInfo project={project} setDisplayInfo={setDisplayInfo} /> : ''}
+			{displayInfo ? <ProjectInfoScreen project={project} setDisplayInfo={setDisplayInfo} /> : ''}
 		</div>
 	);
 }

@@ -1,11 +1,15 @@
+import './ProjectInfoScreen.css';
+
 function ProjectInfo({ project, setDisplayInfo }) {
 	return (
+		// screen overlay displaying project info
 		<div className="project-info-screen">
+			{/* space next to info panel */}
 			<div
+				className="blank-space"
 				onClick={() => {
 					setDisplayInfo(false);
 				}}
-				className="blank-space"
 			></div>
 			<div className="info-panel">
 				<button
@@ -15,6 +19,7 @@ function ProjectInfo({ project, setDisplayInfo }) {
 				>
 					X
 				</button>
+				{/* placeholder container so image can load in without moving elements */}
 				<div className="project-image-container">
 					<img src={project.image} alt={project.projectName} />
 				</div>
