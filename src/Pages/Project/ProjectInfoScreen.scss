@@ -1,4 +1,4 @@
-$project-info-panel-width: 550px;
+$project-info-panel-width: clamp(495px, 50vw, 550px);
 
 .project-info-screen {
 	display: flex;
