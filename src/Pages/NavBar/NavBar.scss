@@ -2,20 +2,20 @@ nav {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	width: 100%;
-	height: 125px;
+	gap: 20px;
 	box-sizing: border-box;
 	padding-top: 50px;
-	padding-right: 100px;
-	gap: 20px;
+	padding-right: 50px;
+	width: 100%;
+	height: 125px;
 
 	.img-container {
 		width: 70px; // so left buttons won't be moved
 		button {
-			width: fit-content;
-			height: fit-content;
 			border: none;
 			background: none;
+			width: fit-content;
+			height: fit-content;
 		}
 		button:hover {
 			cursor: pointer;
@@ -25,14 +25,15 @@ nav {
 			height: 50px;
 		}
 		.dark-mode {
+			padding-left: 5px; // line up with light mode icon
 			width: 40px;
 			height: 40px;
-			padding-left: 5px; // line up with light mode icon
 		}
 	}
 	> button {
-		background: none;
+		z-index: 2;
 		border: none;
+		background: none;
 		color: rgba(0, 0, 0, 0.5);
 		font-size: 15px;
 
@@ -43,7 +44,55 @@ nav {
 
 		&:hover {
 			cursor: pointer;
-			border-bottom: 1px solid black;
+		}
+	}
+
+	.dropdown {
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		justify-content: center;
+		transition: opacity 0.5s;
+		box-sizing: border-box;
+		background-image: linear-gradient(
+				80deg,
+				rgba(252, 247, 245, 0) 0%,
+				rgba(252, 247, 245, 0) 0%,
+				rgba(247, 255, 134, 0.07) 100%
+			),
+			url('../../images/background.svg');
+		background-color: white;
+		padding-top: 200px;
+		width: 100vw;
+		height: 100vh;
+		overflow-y: scroll;
+
+		.dropdown-button {
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
+
+			button {
+				border: none;
+				background: none;
+
+				a {
+					color: rgba(0, 0, 0, 0.5);
+					font-weight: bold;
+					font-size: 26px;
+					text-decoration: none;
+
+					&:hover {
+						color: rgba(0, 0, 0, 1);
+						text-decoration: underline;
+					}
+				}
+			}
+			img {
+				width: 60px;
+				height: 60px;
+			}
 		}
 	}
 }
