@@ -29,7 +29,7 @@ function NavBar({ light, setLight }) {
 			if (displayDropdown) {
 				setDropdownIndex(1);
 			}
-		}, 100);
+		}, 0);
 		let timer2 = setTimeout(() => {
 			if (!displayDropdown) {
 				setDropdownIndex(-1);
