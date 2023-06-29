@@ -4,11 +4,12 @@ import darkMode from '../../images/dark-mode.png';
 import hamburgerIcon from '../../images/Hamburger_icon.svg';
 import { useEffect, useState } from 'react';
 
-function NavBar() {
-	const [light, setLight] = useState(true);
+function NavBar({ light, setLight }) {
 	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 	const [displayDropdown, setDisplayDropdown] = useState(false);
+	const [dropdownIndex, setDropdownIndex] = useState(-1);
 
+	// updates screen size on resize
 	useEffect(() => {
 		if (screenWidth > 495) {
 			setDisplayDropdown(false);
@@ -16,15 +17,24 @@ function NavBar() {
 		function updateScreen() {
 			setScreenWidth(window.innerWidth);
 		}
-
 		window.addEventListener('resize', updateScreen, true);
-
 		return () => {
 			window.removeEventListener('resize', updateScreen, true);
 		};
 	}, [screenWidth]);
 
+	// prevents background scroll when dropdown active
 	useEffect(() => {
+		let timer1 = setTimeout(() => {
+			if (displayDropdown) {
+				setDropdownIndex(1);
+			}
+		}, 100);
+		let timer2 = setTimeout(() => {
+			if (!displayDropdown) {
+				setDropdownIndex(-1);
+			}
+		}, 500);
 		if (displayDropdown) {
 			const body = document.getElementsByTagName('body')[0];
 			body.style.paddingRight = getScrollBarWidth() + 'px';
@@ -34,19 +44,24 @@ function NavBar() {
 			body.style.paddingRight = '0px';
 			body.style.overflowY = 'scroll';
 		}
+
+		return () => {
+			clearTimeout(timer1);
+			clearTimeout(timer2);
+		};
 	}, [displayDropdown]);
 
 	if (screenWidth > 495) {
 		return (
 			<nav>
 				<button>
-					<a href="#projects">Projects</a>
+					<a href="#projects">PROJECTS</a>
 				</button>
 				<button>
-					<a href="#resume">Resume</a>
+					<a href="#resume">RESUME</a>
 				</button>
 				<button>
-					<a href="#contact">Contact</a>
+					<a href="#contact">CONTACT</a>
 				</button>
 				<div className="img-container">
 					<button>
@@ -70,34 +85,30 @@ function NavBar() {
 				>
 					<img src={hamburgerIcon} alt="dropdown" />
 				</button>
-				<div className="dropdown" style={{ opacity: displayDropdown ? 1 : 0 }}>
+				<div className="dropdown" style={{ opacity: displayDropdown ? 1 : 0, zIndex: dropdownIndex }}>
 					<div className="dropdown-button">
 						<button
 							onClick={() => {
 								setDisplayDropdown(false);
 							}}
 						>
-							<a href="#projects">Projects</a>
+							<a href="#projects">PROJECTS</a>
 						</button>
 						<button
 							onClick={() => {
 								setDisplayDropdown(false);
 							}}
 						>
-							<a href="#resume">Resume</a>
+							<a href="#resume">RESUME</a>
 						</button>
 						<button
 							onClick={() => {
 								setDisplayDropdown(false);
 							}}
 						>
-							<a href="#contact">Contact</a>
+							<a href="#contact">CONTACT</a>
 						</button>
-						<button
-							onClick={() => {
-								setDisplayDropdown(false);
-							}}
-						>
+						<button>
 							<img
 								onClick={() => setLight(!light)}
 								className={light ? 'light-mode' : 'dark-mode'}

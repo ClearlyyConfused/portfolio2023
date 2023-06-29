@@ -1,18 +1,25 @@
 @use '../../variables';
 
+.about-me.light-false {
+	.info {
+		h1 {
+			color: white;
+		}
+	}
+}
 .about-me {
-	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 25px;
+	width: 100%;
 
 	@media (max-width: 1024px) {
 		flex-direction: column;
 	}
 	section {
-		width: variables.$column-width; // should be the same to evenly size page into 2 sections
 		border-radius: 10px;
+		width: variables.$column-width; // should be the same to evenly size page into 2 sections
 		overflow: hidden;
 		@media (max-width: variables.$mobile-layout-width) {
 			width: variables.$column-width-mobile;
@@ -20,8 +27,8 @@
 	}
 	.info {
 		h1 {
-			font-size: 60px;
 			margin: 0;
+			font-size: 60px;
 		}
 		p {
 			font-size: 15px;
@@ -33,8 +40,8 @@
 			width: 100%;
 
 			ul {
-				padding: 0px 50px;
 				margin: 0;
+				padding: 0px 50px;
 				li {
 					margin-bottom: 10px;
 				}
