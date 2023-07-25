@@ -8,13 +8,18 @@ import todoList from '../../images/todoList.png';
 import battleShip from '../../images/battleship.png';
 import treeter from '../../images/treeter.png';
 import etchSketch from '../../images/etch-a-sketch.png';
+import { useState } from 'react';
 
 function Projects() {
+	const [yearFilter, setYearFilter] = useState(undefined);
 	let leftColumnProjects = [];
 	let rightColumnProjects = [];
 
 	let i = 0;
 	for (const project of allProjects) {
+		if (project.lastUpdated !== yearFilter && yearFilter) {
+			continue;
+		}
 		if (i % 2 === 0) {
 			leftColumnProjects.push(project);
 		} else {
@@ -23,7 +28,14 @@ function Projects() {
 		i++;
 	}
 
-	return <ProjectSection leftColumnProjects={leftColumnProjects} rightColumnProjects={rightColumnProjects} />;
+	return (
+		<ProjectSection
+			leftColumnProjects={leftColumnProjects}
+			rightColumnProjects={rightColumnProjects}
+			setYearFilter={setYearFilter}
+			yearFilter={yearFilter}
+		/>
+	);
 }
 
 const allProjects = [
@@ -37,6 +49,7 @@ const allProjects = [
 			'https://github.com/ClearlyyConfused/PremierEase',
 			'https://github.com/ClearlyyConfused/matchday_madness_backend',
 		],
+		lastUpdated: 2023,
 	},
 	{
 		image: offcampusMcmaster,
@@ -48,6 +61,7 @@ const allProjects = [
 			'https://github.com/ClearlyyConfused/mcmaster-housing-clone',
 			'https://github.com/ClearlyyConfused/mcmaster-housing-clone-api',
 		],
+		lastUpdated: 2023,
 	},
 	{
 		image: blabberBox,
@@ -59,6 +73,7 @@ const allProjects = [
 			'https://github.com/ClearlyyConfused/blabberbox-frontend',
 			'https://github.com/ClearlyyConfused/blabberbox_backend',
 		],
+		lastUpdated: 2023,
 	},
 	{
 		image: treeter,
@@ -70,6 +85,7 @@ const allProjects = [
 			'https://github.com/ClearlyyConfused/treeter',
 			'https://github.com/ClearlyyConfused/treeter-api',
 		],
+		lastUpdated: 2023,
 	},
 	{
 		image: deepDive,
@@ -78,6 +94,7 @@ const allProjects = [
 		technologies: ['React', 'CSS/SASS'],
 		website: 'https://deeepdive.netlify.app/',
 		github: ['https://github.com/ClearlyyConfused/deep_dive'],
+		lastUpdated: 2023,
 	},
 	{
 		image: todoList,
@@ -86,6 +103,7 @@ const allProjects = [
 		technologies: ['HTML', 'CSS', 'JavaScript'],
 		website: 'https://clearlyyconfused.github.io/todoList/',
 		github: ['https://github.com/ClearlyyConfused/todoList'],
+		lastUpdated: 2022,
 	},
 	{
 		image: etchSketch,
@@ -94,6 +112,7 @@ const allProjects = [
 		technologies: ['HTML', 'CSS', 'JavaScript'],
 		website: 'https://clearlyyconfused.github.io/Etch-a-Sketch/',
 		github: ['https://github.com/ClearlyyConfused/Etch-a-Sketch'],
+		lastUpdated: 2022,
 	},
 	{
 		image: battleShip,
@@ -102,6 +121,7 @@ const allProjects = [
 		technologies: ['HTML', 'CSS', 'JavaScript', 'Jest'],
 		website: 'https://clearlyyconfused.github.io/battleship/',
 		github: ['https://github.com/ClearlyyConfused/battleship'],
+		lastUpdated: 2022,
 	},
 ];
 

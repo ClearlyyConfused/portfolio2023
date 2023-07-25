@@ -1,28 +1,62 @@
 @use '../../variables';
 .projects {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: variables.$project-column-gap;
 	width: 100%;
 
-	@media (max-width: variables.$mobile-layout-width) {
-		flex-direction: column;
-		section {
-			width: variables.$column-width-mobile !important;
+	> h1 {
+		margin: 0;
+		width: calc(80% + variables.$project-column-gap);
+		font-size: 60px;
+	}
+
+	.project-filter {
+		display: flex;
+		gap: 50px;
+		padding: 20px;
+
+		.active {
+			transition: background-color 0.5s;
+			border-radius: 10px;
+			background-color: rgb(52, 58, 64);
+			color: white;
+			font-weight: 600;
 		}
-		.right-column {
-			h1 {
-				display: none; // to remove h1 space from right column when in mobile layout
+		button {
+			border: none;
+			border-radius: 10px;
+			background: none;
+			padding: 8px 10px;
+			width: 70px;
+			color: rgb(40, 40, 40);
+			font-weight: 400;
+			font-size: 16px;
+
+			&:hover {
+				cursor: pointer;
 			}
 		}
 	}
 
-	.right-column {
-		> h1 {
-			// to hide the 2nd h1 and keep both columns balanced
-			visibility: hidden;
+	.columns {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: variables.$project-column-gap;
+		width: 100%;
+
+		@media (max-width: variables.$mobile-layout-width) {
+			flex-direction: column;
+			section {
+				width: variables.$column-width-mobile !important;
+			}
 		}
+	}
+
+	.right-column:last-child {
+		margin-bottom: auto;
 	}
 
 	.left-column,
@@ -34,12 +68,9 @@
 		width: variables.$column-width;
 		overflow: hidden;
 
-		h1 {
-			margin: 0;
-			font-size: 60px;
-		}
 		.project {
 			position: relative;
+			animation: fade-in 1s;
 
 			> img {
 				border-radius: 10px;
@@ -110,5 +141,16 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		margin-top: 50px;
+	}
+	100% {
+		opacity: 1;
+		margin-top: 0px;
 	}
 }
