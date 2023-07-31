@@ -1,6 +1,6 @@
 import './Resume.css';
-import resumePng from './ResumeV1.png';
-import resumePdf from './ResumeV1.pdf';
+import resumePng from './louisdoan2023.png';
+import resumePdf from './louisdoan2023.pdf';
 
 function Resume() {
 	return (
