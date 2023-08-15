@@ -31,15 +31,46 @@ body {
 		url('./images/background.svg');
 	background-color: rgb(17, 17, 27);
 
-	section > h1,
+	main h1,
 	section > p,
 	nav a {
 		color: white !important;
 	}
 
-	.contact button {
-		background-color: white;
-		color: black;
+	.project-filter {
+		> button {
+			color: white;
+		}
+		> button.active {
+			background-color: #4e575f;
+		}
+	}
+
+	#contact-form {
+		button {
+			background-color: #4e575f;
+			color: white;
+		}
+		label {
+			color: white;
+		}
+		input,
+		textarea {
+			border-color: white;
+			color: white;
+		}
+	}
+
+	.info-panel {
+		background-color: #020a13;
+		.technologies > p {
+			background-color: #4e575f !important;
+		}
+		h2,
+		p,
+		a {
+			color: white !important;
+		}
 	}
 
 	nav button img {
