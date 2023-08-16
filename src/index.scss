@@ -77,8 +77,12 @@ body {
 		}
 	}
 
-	nav button img {
+	nav img {
 		filter: invert(1);
+	}
+
+	.underline-animation:after {
+		background-color: white;
 	}
 
 	.about-me {

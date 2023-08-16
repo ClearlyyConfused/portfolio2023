@@ -36,6 +36,7 @@ nav {
 
 	// nav buttons (including dropdown hamburger)
 	> button {
+		position: relative;
 		z-index: 2;
 		border: none;
 		background: none;
@@ -47,6 +48,22 @@ nav {
 		&:hover {
 			cursor: pointer;
 		}
+	}
+
+	.underline-animation:after {
+		position: absolute;
+		bottom: -2px;
+		left: 50%;
+		transition: all 0.3s;
+		background-color: black;
+		width: 0px;
+		height: 1.5px;
+		content: '';
+	}
+
+	.underline-animation:hover:after {
+		left: 0;
+		width: 100%;
 	}
 
 	.dropdown {
@@ -76,6 +93,7 @@ nav {
 			gap: 50px;
 
 			button {
+				position: relative;
 				border: none;
 				background: none;
 
@@ -84,15 +102,14 @@ nav {
 					font-weight: bold;
 					font-size: 26px;
 					text-decoration: none;
-
-					&:hover {
-						text-decoration: underline;
-					}
 				}
 			}
 			img {
 				width: 60px;
 				height: 60px;
+				&:hover {
+					cursor: pointer;
+				}
 			}
 		}
 	}

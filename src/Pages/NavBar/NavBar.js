@@ -54,13 +54,13 @@ function NavBar({ light, setLight }) {
 	if (screenWidth > 495) {
 		return (
 			<nav>
-				<button>
+				<button className="underline-animation">
 					<a href="#projects">PROJECTS</a>
 				</button>
-				<button>
+				<button className="underline-animation">
 					<a href="#resume">RESUME</a>
 				</button>
-				<button>
+				<button className="underline-animation">
 					<a href="#contact">CONTACT</a>
 				</button>
 				<div className="img-container">
@@ -88,6 +88,7 @@ function NavBar({ light, setLight }) {
 				<div className="dropdown" style={{ opacity: displayDropdown ? 1 : 0, zIndex: dropdownIndex }}>
 					<div className="dropdown-button">
 						<button
+							className="underline-animation"
 							onClick={() => {
 								setDisplayDropdown(false);
 							}}
@@ -95,6 +96,7 @@ function NavBar({ light, setLight }) {
 							<a href="#projects">PROJECTS</a>
 						</button>
 						<button
+							className="underline-animation"
 							onClick={() => {
 								setDisplayDropdown(false);
 							}}
@@ -102,6 +104,7 @@ function NavBar({ light, setLight }) {
 							<a href="#resume">RESUME</a>
 						</button>
 						<button
+							className="underline-animation"
 							onClick={() => {
 								setDisplayDropdown(false);
 							}}
