@@ -48,8 +48,8 @@ body {
 
 	#contact-form {
 		button {
-			background-color: #4e575f;
-			color: white;
+			background-color: white;
+			color: black;
 		}
 		label {
 			color: white;
@@ -63,6 +63,10 @@ body {
 
 	.info-panel {
 		background-color: #020a13;
+		> img:first-child {
+			// close icon
+			filter: invert(1);
+		}
 		.technologies > p {
 			background-color: #4e575f !important;
 		}
@@ -101,11 +105,12 @@ body {
 			rgba(247, 255, 134, 0.07) 100%
 		),
 		url('./images/background.svg');
-	background-attachment: fixed;
+
 	padding-bottom: 150px;
 }
 
 /* overlay that slightly changes background gradient */
+/*
 .App::before {
 	position: absolute;
 	top: 0;
@@ -121,6 +126,7 @@ body {
 	height: 100%;
 	content: '';
 }
+*/
 
 @keyframes opacity {
 	0% {

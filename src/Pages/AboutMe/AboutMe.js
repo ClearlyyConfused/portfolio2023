@@ -19,14 +19,14 @@ function AboutMe() {
 						<li>CSS/SCSS</li>
 						<li>JavaScript/TypeScript</li>
 						<li>React</li>
-						<li>NodeJS</li>
+						<li>Jest</li>
 					</ul>
 					<ul>
-						<li>Express</li>
+						<li>NodeJS/Express</li>
 						<li>MongoDB</li>
+						<li>Supabase</li>
 						<li>SQL</li>
 						<li>GitHub/Git</li>
-						<li>Jest</li>
 					</ul>
 				</div>
 			</section>

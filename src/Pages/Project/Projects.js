@@ -67,7 +67,7 @@ const allProjects = [
 		image: blabberBox,
 		projectName: 'BlabberBox',
 		description: `Basic chatting app that allows users to create accounts and create/join rooms with the room's name and password.`,
-		technologies: ['React', 'CSS/SASS', 'Express', 'MongoDB'],
+		technologies: ['React', 'CSS/SASS', 'Express', 'Supabase'],
 		website: 'https://blabberbox.vercel.app/',
 		github: [
 			'https://github.com/ClearlyyConfused/blabberbox-frontend',

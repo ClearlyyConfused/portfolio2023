@@ -1,4 +1,5 @@
 import './ProjectInfoScreen.css';
+import closeIcon from '../../images/close-circle-svgrepo-com.svg';
 
 function ProjectInfo({ project, setDisplayInfo }) {
 	return (
@@ -12,13 +13,13 @@ function ProjectInfo({ project, setDisplayInfo }) {
 				}}
 			></div>
 			<div className="info-panel">
-				<button
+				<img
 					onClick={() => {
 						setDisplayInfo(false);
 					}}
-				>
-					X
-				</button>
+					src={closeIcon}
+					alt="close"
+				/>
 				{/* placeholder container so image can load in without moving elements */}
 				<div className="project-image-container">
 					<img src={project.image} alt={project.projectName} />
