@@ -80,7 +80,7 @@ const allProjects = [
 		projectName: 'Treeter',
 		description: `Twitter-like messaging board that allows users to create accounts and posts. Users can also comment on other posts and update/delete their post.`,
 		technologies: ['React', 'CSS/SASS', 'Express', 'MongoDB'],
-		website: 'https://treeter.netlify.app/',
+		website: 'https://treeter.vercel.app/',
 		github: [
 			'https://github.com/ClearlyyConfused/treeter',
 			'https://github.com/ClearlyyConfused/treeter-api',
