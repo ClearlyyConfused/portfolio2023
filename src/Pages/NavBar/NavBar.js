@@ -1,8 +1,7 @@
 import './NavBar.css';
-import lightMode from '../../images/light-mode.png';
-import darkMode from '../../images/dark-mode.png';
 import hamburgerIcon from '../../images/Hamburger_icon.svg';
 import { useEffect, useState } from 'react';
+import LightModeIcon from './LightModeIcon';
 
 function NavBar({ light, setLight }) {
 	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -64,13 +63,8 @@ function NavBar({ light, setLight }) {
 					<a href="#contact">CONTACT</a>
 				</button>
 				<div className="img-container">
-					<button>
-						<img
-							onClick={() => setLight(!light)}
-							className={light ? 'light-mode' : 'dark-mode'}
-							src={light ? lightMode : darkMode}
-							alt={light ? 'light-mode' : 'dark-mode'}
-						/>
+					<button onClick={() => setLight(!light)}>
+						<LightModeIcon light={light} />
 					</button>
 				</div>
 			</nav>
@@ -111,13 +105,8 @@ function NavBar({ light, setLight }) {
 						>
 							<a href="#contact">CONTACT</a>
 						</button>
-						<button>
-							<img
-								onClick={() => setLight(!light)}
-								className={light ? 'light-mode' : 'dark-mode'}
-								src={light ? lightMode : darkMode}
-								alt={light ? 'light-mode' : 'dark-mode'}
-							/>
+						<button onClick={() => setLight(!light)}>
+							<LightModeIcon light={light} />
 						</button>
 					</div>
 				</div>
