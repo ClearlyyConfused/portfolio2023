@@ -24,6 +24,8 @@ function NavBar({ light, setLight }) {
 
 	// prevents background scroll when dropdown active
 	useEffect(() => {
+		// sets the z index of the dropdown to be in front/behind content depending on if it is being displayed or not
+		// timer to let animation play first
 		let timer1 = setTimeout(() => {
 			if (displayDropdown) {
 				setDropdownIndex(1);
@@ -34,6 +36,8 @@ function NavBar({ light, setLight }) {
 				setDropdownIndex(-1);
 			}
 		}, 500);
+
+		// prevent scroll
 		if (displayDropdown) {
 			const body = document.getElementsByTagName('body')[0];
 			body.style.paddingRight = getScrollBarWidth() + 'px';

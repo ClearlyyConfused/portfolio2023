@@ -20,6 +20,7 @@ nav {
 			width: fit-content;
 			height: fit-content;
 		}
+
 		button:hover {
 			cursor: pointer;
 		}
@@ -34,14 +35,20 @@ nav {
 		}
 	}
 
+	svg {
+		// fixes svg icon on mobile
+		color: black;
+	}
+
 	// nav buttons (including dropdown hamburger)
 	> button {
 		position: relative;
 		z-index: 2;
 		border: none;
 		background: none;
+
 		a {
-			color: inherit;
+			color: black;
 			text-decoration: none;
 		}
 

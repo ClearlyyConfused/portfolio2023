@@ -17,7 +17,9 @@ function Project({ project }) {
 			body.style.paddingRight = getScrollBarWidth() + 'px';
 			body.style.overflowY = 'hidden';
 			setDisplayDescription(true);
-		} else {
+		}
+		// prevents toggle light mode in mobile layout -> this rerenders -> scrolling unlocked
+		else if (displayDescription || inProject) {
 			// if not displaying full project info
 			// undo above, if mouse is not in the project panel then hide project description
 			const body = document.getElementsByTagName('body')[0];
