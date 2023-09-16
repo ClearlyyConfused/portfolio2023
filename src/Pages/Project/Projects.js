@@ -56,7 +56,7 @@ const allProjects = [
 		projectName: 'OffCampus McMaster Clone',
 		description: `A clone of my university's off-campus housing website. Allows user to upload information about a property and search uploaded properties.`,
 		technologies: ['React', 'CSS/SASS', 'Express', 'MongoDB'],
-		website: 'https://offcampus-mcmaster-clone.netlify.app/',
+		website: 'https://mcmaster-housing-clone.vercel.app/',
 		github: [
 			'https://github.com/ClearlyyConfused/mcmaster-housing-clone',
 			'https://github.com/ClearlyyConfused/mcmaster-housing-clone-api',
@@ -92,7 +92,7 @@ const allProjects = [
 		projectName: 'Deep Dive',
 		description: `An experimental site that allows users to control a submarine and explore the depths of the ocean by scrolling down the page. The user can discover and get information about creatures they find by clicking on them.`,
 		technologies: ['React', 'CSS/SASS'],
-		website: 'https://deeepdive.netlify.app/',
+		website: 'https://deepdive.vercel.app/',
 		github: ['https://github.com/ClearlyyConfused/deep_dive'],
 		lastUpdated: 2023,
 	},

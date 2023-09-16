@@ -15,7 +15,7 @@
 	width: 100%;
 
 	@media (max-width: 1024px) {
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 	section {
 		border-radius: 10px;
@@ -50,8 +50,11 @@
 	}
 
 	.image {
+		display: flex;
+		justify-content: center;
 		img {
 			width: 100%;
+			max-width: 470px;
 			height: 500px;
 			object-fit: cover;
 			object-position: top;
