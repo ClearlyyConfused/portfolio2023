@@ -1,5 +1,5 @@
 import './AboutMe.css';
-import sample from '../../images/red.png';
+import sample from '../../images/LouisDoan-transparent.png';
 
 function AboutMe() {
 	return (
