@@ -8,7 +8,7 @@ function Resume() {
 			<section>
 				<h1>Resume.📄</h1>
 				<img src={resumePng} alt="Resume" />
-				<a href={resumePdf} download={'LouisDoan'}>
+				<a href={resumePdf} download={'LouisDoan.pdf'}>
 					Download Resume
 				</a>
 			</section>

@@ -46,8 +46,8 @@ const allProjects = [
 		technologies: ['React', 'CSS/SASS', 'Express', 'MongoDB'],
 		website: 'https://premier-ease.vercel.app/',
 		github: [
-			'https://github.com/ClearlyyConfused/PremierEase',
-			'https://github.com/ClearlyyConfused/matchday_madness_backend',
+			'https://github.com/louisdoan9/PremierEase',
+			'https://github.com/louisdoan9/matchday_madness_backend',
 		],
 		lastUpdated: 2023,
 	},
@@ -58,8 +58,8 @@ const allProjects = [
 		technologies: ['React', 'CSS/SASS', 'Express', 'MongoDB'],
 		website: 'https://mcmaster-housing-clone.vercel.app/',
 		github: [
-			'https://github.com/ClearlyyConfused/mcmaster-housing-clone',
-			'https://github.com/ClearlyyConfused/mcmaster-housing-clone-api',
+			'https://github.com/louisdoan9/mcmaster-housing-clone',
+			'https://github.com/louisdoan9/mcmaster-housing-clone-api',
 		],
 		lastUpdated: 2023,
 	},
@@ -70,8 +70,8 @@ const allProjects = [
 		technologies: ['React', 'CSS/SASS', 'Express', 'Supabase'],
 		website: 'https://blabberbox.vercel.app/',
 		github: [
-			'https://github.com/ClearlyyConfused/blabberbox-frontend',
-			'https://github.com/ClearlyyConfused/blabberbox_backend',
+			'https://github.com/louisdoan9/blabberbox-frontend',
+			'https://github.com/louisdoan9/blabberbox_backend',
 		],
 		lastUpdated: 2023,
 	},
@@ -81,10 +81,7 @@ const allProjects = [
 		description: `Twitter-like messaging board that allows users to create accounts and posts. Users can also comment on other posts and update/delete their post.`,
 		technologies: ['React', 'CSS/SASS', 'Express', 'MongoDB'],
 		website: 'https://treeter.vercel.app/',
-		github: [
-			'https://github.com/ClearlyyConfused/treeter',
-			'https://github.com/ClearlyyConfused/treeter-api',
-		],
+		github: ['https://github.com/louisdoan9/treeter', 'https://github.com/louisdoan9/treeter-api'],
 		lastUpdated: 2023,
 	},
 	{
@@ -93,7 +90,7 @@ const allProjects = [
 		description: `An experimental site that allows users to control a submarine and explore the depths of the ocean by scrolling down the page. The user can discover and get information about creatures they find by clicking on them.`,
 		technologies: ['React', 'CSS/SASS'],
 		website: 'https://deepdive.vercel.app/',
-		github: ['https://github.com/ClearlyyConfused/deep_dive'],
+		github: ['https://github.com/louisdoan9/deep_dive'],
 		lastUpdated: 2023,
 	},
 	{
@@ -101,8 +98,8 @@ const allProjects = [
 		projectName: '2DO',
 		description: `Simple todo app that allows users to create projects and then tasks under each project.`,
 		technologies: ['HTML', 'CSS', 'JavaScript'],
-		website: 'https://clearlyyconfused.github.io/todoList/',
-		github: ['https://github.com/ClearlyyConfused/todoList'],
+		website: 'https://louisdoan9.github.io/todoList/',
+		github: ['https://github.com/louisdoan9/todoList'],
 		lastUpdated: 2022,
 	},
 	{
@@ -110,8 +107,8 @@ const allProjects = [
 		projectName: 'Etch-A-Sketch',
 		description: `An etch-a-sketch that allows users to add colored squared to a board. User can also change number of squares board contains.`,
 		technologies: ['HTML', 'CSS', 'JavaScript'],
-		website: 'https://clearlyyconfused.github.io/Etch-a-Sketch/',
-		github: ['https://github.com/ClearlyyConfused/Etch-a-Sketch'],
+		website: 'https://louisdoan9.github.io/Etch-a-Sketch/',
+		github: ['https://github.com/louisdoan9/Etch-a-Sketch'],
 		lastUpdated: 2022,
 	},
 	{
@@ -119,8 +116,8 @@ const allProjects = [
 		projectName: 'BattleShip',
 		description: `Simple game of battleship vs an AI. AI has difficulty setting that makes it more/less likely to hit the user's ship.`,
 		technologies: ['HTML', 'CSS', 'JavaScript', 'Jest'],
-		website: 'https://clearlyyconfused.github.io/battleship/',
-		github: ['https://github.com/ClearlyyConfused/battleship'],
+		website: 'https://louisdoan9.github.io/battleship/',
+		github: ['https://github.com/louisdoan9/battleship'],
 		lastUpdated: 2022,
 	},
 ];
