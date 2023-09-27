@@ -47,7 +47,7 @@ const allProjects = [
 		website: 'https://premier-ease.vercel.app/',
 		github: [
 			'https://github.com/louisdoan9/PremierEase',
-			'https://github.com/louisdoan9/matchday_madness_backend',
+			'https://github.com/louisdoan9/PremierEase_backend',
 		],
 		lastUpdated: 2023,
 	},
