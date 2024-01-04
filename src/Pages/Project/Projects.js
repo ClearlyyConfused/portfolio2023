@@ -3,7 +3,7 @@ import ProjectSection from './ProjectsSection';
 import offcampusMcmaster from '../../images/offcampus-mcmaster.png';
 import premierEase from '../../images/premier-ease.png';
 import blabberBox from '../../images/blabberbox.png';
-import deepDive from '../../images/deepDive.png';
+import connect4fun from '../../images/connect4fun.png';
 import todoList from '../../images/todoList.png';
 import battleShip from '../../images/battleship.png';
 import treeter from '../../images/treeter.png';
@@ -54,7 +54,7 @@ const allProjects = [
 	{
 		image: offcampusMcmaster,
 		projectName: 'OffCampus McMaster Clone',
-		description: `A clone of my university's off-campus housing website. Allows user to upload information about a property and search uploaded properties.`,
+		description: `A clone of McMaster's off-campus housing website. Allows user to upload information about a property and search uploaded properties.`,
 		technologies: ['React', 'CSS/SASS', 'Express', 'MongoDB'],
 		website: 'https://mcmaster-housing-clone.vercel.app/',
 		github: [
@@ -66,7 +66,7 @@ const allProjects = [
 	{
 		image: blabberBox,
 		projectName: 'BlabberBox',
-		description: `Basic chatting app that allows users to create accounts and create/join rooms with the room's name and password.`,
+		description: `Chatting app that allows users to create accounts and create/join rooms with the room's name and password.`,
 		technologies: ['React', 'CSS/SASS', 'Express', 'Supabase'],
 		website: 'https://blabberbox.vercel.app/',
 		github: [
@@ -85,18 +85,18 @@ const allProjects = [
 		lastUpdated: 2023,
 	},
 	{
-		image: deepDive,
-		projectName: 'Deep Dive',
-		description: `An experimental site that allows users to control a submarine and explore the depths of the ocean by scrolling down the page. The user can discover and get information about creatures they find by clicking on them.`,
-		technologies: ['React', 'CSS/SASS'],
-		website: 'https://deepdive.vercel.app/',
-		github: ['https://github.com/louisdoan9/deep_dive'],
+		image: connect4fun,
+		projectName: 'Connect4Fun',
+		description: `A website that allows users to play Connect 4 with others in real-time.`,
+		technologies: ['React', 'CSS/SASS', 'Express', 'Supabase'],
+		website: 'https://connect4fun.vercel.app/',
+		github: ['https://github.com/louisdoan9/Connect4Fun'],
 		lastUpdated: 2023,
 	},
 	{
 		image: todoList,
 		projectName: '2DO',
-		description: `Simple todo app that allows users to create projects and then tasks under each project.`,
+		description: `Todo app that allows users to create projects and then tasks under each project.`,
 		technologies: ['HTML', 'CSS', 'JavaScript'],
 		website: 'https://louisdoan9.github.io/todoList/',
 		github: ['https://github.com/louisdoan9/todoList'],
