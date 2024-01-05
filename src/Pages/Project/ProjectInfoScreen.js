@@ -1,7 +1,10 @@
 import './ProjectInfoScreen.css';
 import closeIcon from '../../images/close-circle-svgrepo-com.svg';
+import { useState } from 'react';
 
 function ProjectInfo({ project, setDisplayInfo }) {
+	const [displayedImage, setDisplayedImage] = useState(0);
+
 	return (
 		// screen overlay displaying project info
 		<div className="project-info-screen">
@@ -22,7 +25,21 @@ function ProjectInfo({ project, setDisplayInfo }) {
 				/>
 				{/* placeholder container so image can load in without moving elements */}
 				<div className="project-image-container">
-					<img src={project.image} alt={project.projectName} />
+					<img src={project.image[displayedImage]} alt={project.projectName} />
+					<div className="sub-images">
+						{project.image.map((image, index) => {
+							return (
+								<img
+									onClick={() => {
+										setDisplayedImage(index);
+									}}
+									src={image}
+									alt={project.projectName}
+									className={displayedImage === index ? 'active' : ''}
+								/>
+							);
+						})}
+					</div>
 				</div>
 				<div className="info">
 					<h1>{project.projectName}</h1>

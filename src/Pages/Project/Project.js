@@ -43,7 +43,7 @@ function Project({ project }) {
 
 	return (
 		<div className="project">
-			<img src={project.image} alt="" srcset="" />
+			<img src={project.image[0]} alt="" srcset="" />
 
 			{/* black gradient when hovered */}
 			<div
