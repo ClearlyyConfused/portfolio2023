@@ -1,9 +1,36 @@
 import './ProjectInfoScreen.css';
 import closeIcon from '../../images/close-circle-svgrepo-com.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function ProjectInfo({ project, setDisplayInfo }) {
 	const [displayedImage, setDisplayedImage] = useState(0);
+	const [fullScreenImage, setFullScreenImage] = useState(null);
+
+	function getWindowWidth() {
+		const { innerWidth: width } = window;
+		return width;
+	}
+
+	const [windowWidth, setWindowWidth] = useState(getWindowWidth());
+
+	useEffect(() => {
+		function handleResize() {
+			setWindowWidth(getWindowWidth());
+			if (windowWidth <= 495) {
+				setFullScreenImage(null);
+			}
+		}
+
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, [windowWidth]);
+
+	function minimizeImage(e) {
+		e.preventDefault();
+		if (e.target === document.getElementsByClassName('full-screen-image-background')[0]) {
+			setFullScreenImage(null);
+		}
+	}
 
 	return (
 		// screen overlay displaying project info
@@ -25,7 +52,15 @@ function ProjectInfo({ project, setDisplayInfo }) {
 				/>
 				{/* placeholder container so image can load in without moving elements */}
 				<div className="project-image-container">
-					<img src={project.image[displayedImage]} alt={project.projectName} />
+					<img
+						onClick={() => {
+							if (windowWidth > 495) {
+								setFullScreenImage(displayedImage);
+							}
+						}}
+						src={project.image[displayedImage]}
+						alt={project.projectName}
+					/>
 					<div className="sub-images">
 						{project.image.map((image, index) => {
 							return (
@@ -71,6 +106,23 @@ function ProjectInfo({ project, setDisplayInfo }) {
 					</div>
 				</div>
 			</div>
+			{/* full screen image display */}
+			{fullScreenImage !== null ? (
+				<div className="full-screen-image-background" onClick={minimizeImage}>
+					<div>
+						<img
+							onClick={() => {
+								setFullScreenImage(null);
+							}}
+							src={closeIcon}
+							alt="close"
+						/>
+						<img src={project.image[fullScreenImage]} alt="" />
+					</div>
+				</div>
+			) : (
+				''
+			)}
 		</div>
 	);
 }
