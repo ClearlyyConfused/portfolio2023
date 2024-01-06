@@ -166,6 +166,7 @@ $project-info-panel-width: clamp(495px, 50vw, 550px);
 			> img:first-child {
 				border-radius: 25px;
 				background: none;
+				padding-bottom: 5px;
 				width: 25px;
 				min-height: 25px;
 				color: gray;
@@ -175,6 +176,7 @@ $project-info-panel-width: clamp(495px, 50vw, 550px);
 				}
 			}
 			img {
+				border-radius: 5px;
 				max-width: 85vw;
 				max-height: 85vh;
 			}
