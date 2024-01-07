@@ -11,6 +11,7 @@ https://louisdoan.vercel.app/
 
 ## Screenshots 📸
 
-![App Screenshot 1](./README_images/Screenshot%202023-07-27%20214808.png)
-![App Screenshot 2](./README_images/Screenshot%202023-07-27%20215030.png)
-![App Screenshot 3](./README_images/Screenshot%202023-07-27%20215049.png)
+![App Screenshot 1](./README_images/portfolio.png)
+![App Screenshot 2](./README_images/portfolio2.png)
+![App Screenshot 3](./README_images/portfolio3.png)
+![App Screenshot 3](./README_images/portfolio4.png)
