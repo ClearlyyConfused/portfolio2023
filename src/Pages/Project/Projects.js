@@ -1,5 +1,5 @@
 import ProjectSection from './ProjectsSection';
-// images should be 1440/1000 in devtools
+// images should be 1400/1000 in devtools
 import offcampusMcmaster from '../../images/offcampus-mcmaster.png';
 import offcampusMcmaster2 from '../../images/offcampus-mcmaster2.png';
 import offcampusMcmaster3 from '../../images/offcampus-mcmaster3.png';
