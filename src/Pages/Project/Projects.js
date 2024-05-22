@@ -66,7 +66,7 @@ const allProjects = [
 		image: [premierEase, premierEase2, premierEase3, premierEase4],
 		projectName: 'Premier Ease',
 		description: `A website that fetches data from an external API and displays data about the English Premier League. Data displayed includes league standings, live match scores, match results, and league news.`,
-		technologies: ['React', 'CSS/SASS', 'Express', 'MongoDB'],
+		technologies: ['React', 'CSS/SASS', 'Express', 'MongoDB', 'Selenium', 'Jest'],
 		website: 'https://premier-ease.vercel.app/',
 		github: [
 			'https://github.com/louisdoan9/PremierEase',
