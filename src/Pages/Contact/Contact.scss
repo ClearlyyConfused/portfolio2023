@@ -6,6 +6,8 @@
 	width: 100%;
 
 	section {
+		backdrop-filter: blur(1px);
+		padding: 5px;
 		width: calc((variables.$column-width * 2) + variables.$project-column-gap);
 
 		h1 {
