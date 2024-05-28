@@ -108,8 +108,10 @@ body {
 		),
 		url('./images/background.svg');
 
-	/* for background to not move with the page */
-	background-attachment: fixed;
+	/* for background to not move with the page, causes issues on mobile */
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
 
 	padding-bottom: 150px;
 }
