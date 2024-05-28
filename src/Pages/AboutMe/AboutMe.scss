@@ -15,7 +15,7 @@
 	width: 100%;
 
 	@media (max-width: 1024px) {
-		flex-direction: column-reverse;
+		flex-direction: column;
 	}
 	section {
 		border-radius: 10px;
@@ -31,8 +31,8 @@
 			font-size: 60px;
 		}
 		p {
-			font-size: 15px;
-			line-height: 2;
+			font-size: 17px;
+			line-height: 1.8;
 		}
 		.technologies {
 			display: flex;
