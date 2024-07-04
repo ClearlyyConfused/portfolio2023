@@ -1,5 +1,6 @@
 import NavBar from './Pages/NavBar/NavBar';
 import AboutMe from './Pages/AboutMe/AboutMe';
+import Technologies from './Pages/Technologies/Technologies';
 import Projects from './Pages/Project/Projects';
 import Resume from './Pages/Resume/Resume';
 import Contact from './Pages/Contact/Contact';
@@ -12,6 +13,7 @@ function App() {
 		<div className={`App light-${light}`}>
 			<NavBar light={light} setLight={setLight} />
 			<AboutMe />
+			<Technologies />
 			<Projects />
 			<Resume />
 			<Contact />

@@ -1,0 +1,76 @@
+@use '../../variables';
+
+main.technologies {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	box-sizing: border-box;
+	width: 100%;
+
+	h1 {
+		margin: 0;
+		margin-left: -15px;
+		width: calc(80% + variables.$project-column-gap);
+		font-size: 60px;
+		word-break: break-all;
+	}
+
+	.technologies-group:nth-child(3),
+	.technologies-group:nth-child(4),
+	.technologies-group:nth-child(7) {
+		flex-direction: row-reverse;
+		@media (max-width: 1200px) {
+			flex-direction: column;
+		}
+	}
+	.technologies-group {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+		box-sizing: border-box;
+		width: fit-content;
+		height: fit-content;
+
+		@media (max-width: 1200px) {
+			flex-direction: column;
+			> * {
+				width: 90% !important;
+			}
+		}
+
+		.technologies-images {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px;
+			width: 30%;
+
+			img {
+				backdrop-filter: blur(1px);
+				transition: 0.3s all;
+				box-sizing: border-box;
+				box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+				border-radius: 10px;
+				padding: 15px;
+				aspect-ratio: 1 / 1; // for height = width
+				width: calc(33% - 10px);
+				min-width: 100px;
+				max-width: 200px;
+
+				&:hover {
+					box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+
+		p {
+			backdrop-filter: blur(1px);
+			box-sizing: border-box;
+			width: 50%;
+		}
+	}
+}

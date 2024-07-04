@@ -10,7 +10,7 @@ function NavBar({ light, setLight }) {
 
 	// updates screen size on resize
 	useEffect(() => {
-		if (screenWidth > 495) {
+		if (screenWidth > 600) {
 			setDisplayDropdown(false);
 		}
 		function updateScreen() {
@@ -54,9 +54,12 @@ function NavBar({ light, setLight }) {
 		};
 	}, [displayDropdown]);
 
-	if (screenWidth > 495) {
+	if (screenWidth > 600) {
 		return (
 			<nav>
+				<button className="underline-animation">
+					<a href="#technologies">TECHNOLOGIES</a>
+				</button>
 				<button className="underline-animation">
 					<a href="#projects">PROJECTS</a>
 				</button>
@@ -85,6 +88,14 @@ function NavBar({ light, setLight }) {
 				</button>
 				<div className="dropdown" style={{ opacity: displayDropdown ? 1 : 0, zIndex: dropdownIndex }}>
 					<div className="dropdown-button">
+						<button
+							className="underline-animation"
+							onClick={() => {
+								setDisplayDropdown(false);
+							}}
+						>
+							<a href="#technologies">TECHNOLOGIES</a>
+						</button>
 						<button
 							className="underline-animation"
 							onClick={() => {

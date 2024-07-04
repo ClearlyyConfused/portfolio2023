@@ -110,7 +110,7 @@ body {
 
 	/* for background to not move with the page, causes issues on mobile */
 	@media (min-width: 426px) {
-		background-attachment: fixed;
+		// background-attachment: fixed;
 	}
 
 	padding-bottom: 150px;
