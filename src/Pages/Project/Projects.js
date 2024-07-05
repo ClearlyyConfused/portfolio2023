@@ -34,7 +34,7 @@ import etchSketch2 from '../../images/etch-a-sketch2.png';
 import { useState } from 'react';
 
 function Projects() {
-	const [yearFilter, setYearFilter] = useState(undefined);
+	const [yearFilter, setYearFilter] = useState(0);
 	let leftColumnProjects = [];
 	let rightColumnProjects = [];
 

@@ -5,6 +5,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	padding: 60px 0px;
 	width: 100%;
 
 	> h1 {
@@ -15,8 +17,8 @@
 
 	.project-filter {
 		display: flex;
-		gap: 50px;
-		padding: 20px;
+		gap: 40px;
+		padding: 20px 10px;
 
 		.active {
 			transition: background-color 0.5s;

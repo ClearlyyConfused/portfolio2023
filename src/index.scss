@@ -1,6 +1,6 @@
 html {
-	height: 100%;
-	overflow-y: hidden;
+	//height: 100%;
+	//overflow-y: hidden;
 }
 
 body {
@@ -95,25 +95,72 @@ body {
 	position: relative;
 	flex-direction: column;
 	justify-content: center;
-	gap: 120px; /* gap between sections */
+	// gap: 120px; /* gap between sections */
 
-	transition: background-color 0.5s;
+	transition: --myColor2 2s;
 
-	/* gradient and svg */
-	background-image: linear-gradient(
-			80deg,
-			rgba(252, 247, 245, 0) 0%,
-			rgba(252, 247, 245, 0) 0%,
-			rgba(255, 134, 243, 0.25) 100%
-		),
+	/* background gradient and svg */
+	background: linear-gradient(80deg, var(--myColor1) 0%, var(--myColor1) 0%, var(--myColor2) 100%),
 		url('./images/background.svg');
+	/*
+	background: linear-gradient(
+		80deg,
+		rgba(252, 247, 245, 0) 0%,
+		rgba(252, 247, 245, 0) 0%,
+		rgba(255, 134, 243, 0.25) 100%
+	);
+	*/
+
+	/* background svg without gradient */
+	/*
+	background-image: linear-gradient(80deg, rgba(252, 247, 245, 0) 0%, rgba(252, 247, 245, 0) 100%),
+		url('./images/background.svg');*/
 
 	/* for background to not move with the page, causes issues on mobile */
 	@media (min-width: 426px) {
-		// background-attachment: fixed;
+		background-attachment: fixed;
 	}
 
 	padding-bottom: 150px;
+}
+
+@property --myColor1 {
+	syntax: '<color>';
+	initial-value: rgba(252, 247, 245, 0);
+	inherits: false;
+}
+
+@property --myColor2 {
+	syntax: '<color>';
+	initial-value: rgba(255, 134, 243, 0.25);
+	inherits: false;
+}
+
+.App.techSection {
+	--myColor2: rgba(255, 255, 0, 0.25);
+	transition: --myColor2 2s;
+
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
+}
+
+.App.projectSection {
+	--myColor2: rgba(0, 255, 60, 0.25);
+	transition: --myColor2 2s;
+
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
+}
+
+.App.resumeSection {
+	--myColor2: rgba(255, 0, 38, 0.25);
+	transition: --myColor2 2s;
+
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
 }
 
 /* overlay that slightly changes background gradient */

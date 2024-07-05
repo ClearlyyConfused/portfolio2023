@@ -6,7 +6,7 @@ function ProjectSection({ leftColumnProjects, rightColumnProjects, setYearFilter
 		<main className="projects" id="projects">
 			<h1>Projects.📋</h1>
 			<div className="project-filter">
-				<button onClick={() => setYearFilter(undefined)} className={yearFilter === undefined ? 'active' : ''}>
+				<button onClick={() => setYearFilter(0)} className={yearFilter === 0 ? 'active' : ''}>
 					All
 				</button>
 				<button onClick={() => setYearFilter(2023)} className={yearFilter === 2023 ? 'active' : ''}>
@@ -18,13 +18,15 @@ function ProjectSection({ leftColumnProjects, rightColumnProjects, setYearFilter
 			</div>
 			<div className="columns">
 				<section className="left-column">
-					{leftColumnProjects.map((project) => {
-						return <Project key={Math.random()} project={project} />;
+					{leftColumnProjects.map((project, key) => {
+						return (
+							<Project key={yearFilter === 2023 ? key + yearFilter : key - yearFilter} project={project} />
+						);
 					})}
 				</section>
 				<section className="right-column">
-					{rightColumnProjects.map((project) => {
-						return <Project key={Math.random()} project={project} />;
+					{rightColumnProjects.map((project, key) => {
+						return <Project key={(key + yearFilter) * -1} project={project} />;
 					})}
 				</section>
 			</div>

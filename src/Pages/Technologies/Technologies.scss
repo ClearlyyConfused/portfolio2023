@@ -6,7 +6,14 @@ main.technologies {
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
+
+	// backdrop-filter: brightness(0) saturate(100%) invert(85%) sepia(22%) saturate(128%) hue-rotate(227deg)
+	// 	brightness(79%) contrast(90%) opacity(0.3);
 	box-sizing: border-box;
+
+	// box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+	// border-bottom-right-radius: 10px;
+	padding: 60px 0px;
 	width: 100%;
 
 	h1 {
