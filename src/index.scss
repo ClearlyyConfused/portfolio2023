@@ -131,34 +131,85 @@ body {
 
 @property --myColor2 {
 	syntax: '<color>';
-	initial-value: rgba(255, 134, 243, 0.25);
+	initial-value: #c1e2ec;
 	inherits: false;
 }
 
-.App.techSection {
-	--myColor2: rgba(255, 255, 0, 0.25);
+.App.aboutMeSection {
+	--myColor2: #c1e2ec;
 	transition: --myColor2 2s;
 
 	@media (min-width: 426px) {
 		background-attachment: fixed;
+	}
+
+	#about-me {
+		h1:after {
+			left: 25%;
+			width: 50%;
+		}
+	}
+}
+
+.App.techSection {
+	--myColor2: rgba(211, 211, 211, 1);
+	transition: --myColor2 2s;
+
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
+
+	#technologies {
+		h1:after {
+			left: 25%;
+			width: 50%;
+		}
 	}
 }
 
 .App.projectSection {
-	--myColor2: rgba(0, 255, 60, 0.25);
+	--myColor2: #c9e9c4;
 	transition: --myColor2 2s;
 
 	@media (min-width: 426px) {
 		background-attachment: fixed;
 	}
+
+	#projects {
+		h1:after {
+			left: 35%;
+			width: 30%;
+		}
+	}
 }
 
 .App.resumeSection {
-	--myColor2: rgba(255, 0, 38, 0.25);
+	--myColor2: rgba(211, 211, 211, 1);
 	transition: --myColor2 2s;
 
 	@media (min-width: 426px) {
 		background-attachment: fixed;
+	}
+	#resume {
+		h1:after {
+			left: 35%;
+			width: 30%;
+		}
+	}
+}
+
+.App.contactSection {
+	--myColor2: #c1e2ec;
+	transition: --myColor2 2s;
+
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
+	#contact {
+		h1:after {
+			left: 35%;
+			width: 30%;
+		}
 	}
 }
 

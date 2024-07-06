@@ -10,10 +10,22 @@
 	width: 100%;
 
 	> h1 {
+		position: relative;
 		margin: 0;
 		width: calc(80% + variables.$project-column-gap);
 		font-size: 60px;
 		text-align: center;
+	}
+
+	> h1:after {
+		position: absolute;
+		bottom: -2px;
+		left: 50%;
+		transition: all 1s;
+		background-color: black;
+		width: 0px;
+		height: 1.5px;
+		content: '';
 	}
 
 	.project-filter {

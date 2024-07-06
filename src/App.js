@@ -11,20 +11,28 @@ function App() {
 	const [scrollPosition, setScrollPosition] = useState('');
 
 	const handleScroll = () => {
-		if (window.scrollY > window.scrollY + document.getElementById('resume').getBoundingClientRect().top) {
+		if (
+			window.scrollY + 300 >
+			window.scrollY + document.getElementById('contact').getBoundingClientRect().top
+		) {
+			setScrollPosition('contactSection');
+		} else if (
+			window.scrollY + 300 >
+			window.scrollY + document.getElementById('resume').getBoundingClientRect().top
+		) {
 			setScrollPosition('resumeSection');
 		} else if (
-			window.scrollY >
+			window.scrollY + 300 >
 			window.scrollY + document.getElementById('projects').getBoundingClientRect().top
 		) {
 			setScrollPosition('projectSection');
 		} else if (
-			window.scrollY >
+			window.scrollY + 300 >
 			window.scrollY + document.getElementById('technologies').getBoundingClientRect().top
 		) {
 			setScrollPosition('techSection');
 		} else {
-			setScrollPosition('');
+			setScrollPosition('aboutMeSection');
 		}
 	};
 
@@ -41,10 +49,14 @@ function App() {
 			className={`App light-${light} ${
 				scrollPosition === 'resumeSection'
 					? 'resumeSection'
+					: scrollPosition === 'contactSection'
+					? 'contactSection'
 					: scrollPosition === 'projectSection'
 					? 'projectSection'
 					: scrollPosition === 'techSection'
 					? 'techSection'
+					: scrollPosition === 'aboutMeSection'
+					? 'aboutMeSection'
 					: ''
 			}`}
 		>

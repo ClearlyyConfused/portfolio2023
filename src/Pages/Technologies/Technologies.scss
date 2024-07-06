@@ -16,19 +16,30 @@ main.technologies {
 	width: 100%;
 
 	h1 {
+		position: relative;
 		margin: 0;
+		margin-bottom: 50px;
 		margin-left: -15px;
-		padding-bottom: 50px;
 		width: calc(80% + variables.$project-column-gap);
 		font-size: 60px;
 		text-align: center;
 		word-break: break-all;
 	}
 
+	h1:after {
+		position: absolute;
+		bottom: -2px;
+		left: 50%;
+		transition: all 1s;
+		background-color: black;
+		width: 0px;
+		height: 1.5px;
+		content: '';
+	}
+
 	.technologies-group:nth-child(3),
 	.technologies-group:nth-child(4),
 	.technologies-group:nth-child(7) {
-		flex-direction: row-reverse;
 		@media (max-width: 1200px) {
 			flex-direction: column;
 		}
@@ -38,12 +49,13 @@ main.technologies {
 	}
 	.technologies-group {
 		display: flex;
+		flex-direction: column-reverse;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: 25px;
+		gap: 10px;
 		box-sizing: border-box;
-		padding-bottom: 100px;
+		padding-bottom: 50px;
 		width: fit-content;
 		height: fit-content;
 
@@ -79,12 +91,14 @@ main.technologies {
 			}
 		}
 
-		p {
-			backdrop-filter: blur(1px);
-			box-sizing: border-box;
-			width: 50%;
-			font-size: 17px;
-			line-height: 1.8;
+		.technologies-info {
+			width: 45%;
+			p {
+				backdrop-filter: blur(1px);
+				box-sizing: border-box;
+				font-size: 17px;
+				line-height: 1.8;
+			}
 		}
 	}
 }

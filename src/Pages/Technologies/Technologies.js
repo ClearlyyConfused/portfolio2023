@@ -37,11 +37,14 @@ function Technologies() {
 						title="TypeScript"
 					/>
 				</div>
-				<p>
-					For the <strong>frontend</strong>, I use HTML, CSS, and JavaScript. I incorporate SASS and
-					TypeScript when needed for more maintainable code. React is my framework of choice for its
-					intuitiveness and ability to speed up development.
-				</p>
+				<div className="technologies-info">
+					<h2>Frontend</h2>
+					<p>
+						For the frontend, I use HTML, CSS, and JavaScript. I incorporate SASS and TypeScript when needed
+						for more maintainable code. React is my framework of choice for its intuitiveness and ability to
+						speed up development.
+					</p>
+				</div>
 			</section>
 			<section className="technologies-group">
 				<div className="technologies-images">
@@ -56,10 +59,13 @@ function Technologies() {
 						title="Express"
 					/>
 				</div>
-				<p>
-					On the <strong>backend</strong>, I use Node.js/Express to create REST APIs. Endpoints are created
-					for HTTP methods like GET and POST so that the frontend can interact with the database.
-				</p>
+				<div className="technologies-info">
+					<h2>Backend</h2>
+					<p>
+						On the backend, I use Node.js/Express to create REST APIs. Endpoints are created for HTTP methods
+						like GET and POST so that the frontend can interact with the database.
+					</p>
+				</div>
 			</section>
 			<section className="technologies-group">
 				<div className="technologies-images">
@@ -79,11 +85,14 @@ function Technologies() {
 						title="SQL"
 					/>
 				</div>
-				<p>
-					For <strong>databases</strong>, I prefer MongoDB for its simplicity in most projects, while Supabase
-					is used for real-time data access when needed. My SQL experience, gained from McMaster's database
-					course, includes writing complex queries and database creation.
-				</p>
+				<div className="technologies-info">
+					<h2>Databases</h2>
+					<p>
+						For databases, I prefer MongoDB for its simplicity in most projects, while Supabase is used for
+						real-time data access when needed. My SQL experience, gained from McMaster's database course,
+						includes writing complex queries and database creation.
+					</p>
+				</div>
 			</section>
 			<section className="technologies-group">
 				<div className="technologies-images">
@@ -103,11 +112,14 @@ function Technologies() {
 						title="C"
 					/>
 				</div>
-				<p>
-					In terms of <strong>general languages</strong>, I gained proficiency in Python, Java, and C, at
-					McMaster. Covering the fundamentals to advanced algorithms such as shortest path and backtracking in
-					Python and Java, and exploring low-level processes like forking and kernel modules in C.
-				</p>
+				<div className="technologies-info">
+					<h2>General</h2>
+					<p>
+						In terms of general languages, I gained proficiency in Python, Java, and C, at McMaster. Covering
+						the fundamentals to advanced algorithms such as shortest path and backtracking in Python and Java,
+						and exploring low-level processes like forking and kernel modules in C.
+					</p>
+				</div>
 			</section>
 			<section className="technologies-group">
 				<div className="technologies-images">
@@ -127,11 +139,14 @@ function Technologies() {
 						title="WebAssembly"
 					/>
 				</div>
-				<p>
-					I also studied <strong>niche languages</strong> like Haskell, Prolog, and WebAssembly. While these
-					aren't often used in the real world, this expanded my understanding of language design and showcases
-					my commitment to learning new things.
-				</p>
+				<div className="technologies-info">
+					<h2>Niche</h2>
+					<p>
+						I also studied niche languages like Haskell, Prolog, and WebAssembly. While these aren't often
+						used in the real world, this expanded my understanding of language design and showcases my
+						commitment to learning new things.
+					</p>
+				</div>
 			</section>
 			<section className="technologies-group">
 				<div className="technologies-images">
@@ -151,12 +166,14 @@ function Technologies() {
 						title="Selenium"
 					/>
 				</div>
-
-				<p>
-					For <strong>quality assurance</strong>, I use Jest/JUnit for creating test suites in their
-					respective languages. For end-to-end testing of web pages, I use Selenium to test general user
-					actions like navigation, account creation, and login.
-				</p>
+				<div className="technologies-info">
+					<h2>Quality Assurance</h2>
+					<p>
+						For quality assurance, I use Jest/JUnit for creating test suites in their respective languages.
+						For end-to-end testing of web pages, I use Selenium to test general user actions like navigation,
+						account creation, and login.
+					</p>
+				</div>
 			</section>
 			<section className="technologies-group">
 				<div className="technologies-images">
@@ -176,11 +193,14 @@ function Technologies() {
 						title="MS Office"
 					/>
 				</div>
-				<p>
-					Regarding <strong>miscellaneous</strong> technologies, I use GitHub and Git for version control
-					across all my projects. At McMaster, I utilized the Microsoft Office Suite extensively for tasks
-					such as writing reports/essays, presenting information, and handling data.
-				</p>
+				<div className="technologies-info">
+					<h2>Miscellaneous</h2>
+					<p>
+						Regarding miscellaneous technologies, I use GitHub and Git for version control across all my
+						projects. At McMaster, I utilized the Microsoft Office Suite extensively for tasks such as writing
+						reports/essays, presenting information, and handling data.
+					</p>
+				</div>
 			</section>
 		</main>
 	);

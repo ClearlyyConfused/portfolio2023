@@ -3,7 +3,7 @@ import selfPicture from '../../images/LouisDoan-transparent.png';
 
 function AboutMe() {
 	return (
-		<main className="about-me">
+		<main id="about-me">
 			<section className="info">
 				<h1>Hey.</h1>
 				<p>
