@@ -5,20 +5,18 @@ function AboutMe() {
 	return (
 		<main className="about-me">
 			<section className="info">
-				<h1>Hey.🫡</h1>
+				<h1>Hey.</h1>
 				<p>
-					I'm Louis, a passionate and hard-working student hoping to enter the tech field. Growing up as the
-					youngest in the family, it was often up to me to deal with all the technical difficulties around the
-					house. My first exposure to actual programming was in grade 6 when we had to create a game using the
-					language "Scratch" for an assignment. My favorite part was getting that feeling of solving a
-					difficult problem and showing off what I created to the class. Ever since then, I knew this was the
-					career I wanted to pursue.
+					I'm <strong>Louis</strong>, a <strong>passionate</strong> and <strong>hard-working</strong> student
+					aiming to enter the tech field. My first exposure to programming was in grade 6 when we had to
+					create a game using the language "Scratch". My favorite part was getting that feeling of{' '}
+					<strong>solving a difficult problem</strong> and <strong>showing my peers</strong> what I created.
+					Since then, I knew this was the career I wanted to pursue.
 				</p>
 				<p>
-					Currently a 4th year computer science student at McMaster university, I'm constantly being
-					introduced to new ideas and overcoming challenging problems. I think my greatest strength is my
-					hard-working nature and willingness to learn! Here are the main technologies that I have learned
-					about thus far:
+					Currently a 4th year computer science student at <strong>McMaster</strong> university, I'm
+					constantly learning new things. I think my greatest strength is my <strong>hard-working</strong>{' '}
+					nature and <strong>eagerness to learn</strong>!
 				</p>
 			</section>
 			<section className="image">

@@ -4,11 +4,10 @@ nav {
 	align-items: center;
 	gap: 20px;
 
-	backdrop-filter: invert(85%) sepia(22%) saturate(128%) hue-rotate(227deg) brightness(79%) contrast(90%);
 	box-sizing: border-box;
 
 	// distance nav bar is from top and right
-	padding: 20px 30px;
+	padding: 50px 30px 30px 0px;
 
 	width: 100%;
 
@@ -36,7 +35,6 @@ nav {
 	}
 
 	svg {
-		filter: invert(94%) sepia(0%) saturate(24%) hue-rotate(95deg) brightness(106%) contrast(106%);
 		// fixes svg icon on mobile
 		color: black;
 	}
@@ -49,7 +47,7 @@ nav {
 		background: none;
 
 		a {
-			color: white;
+			color: black;
 			text-decoration: none;
 		}
 
@@ -63,7 +61,7 @@ nav {
 		bottom: -2px;
 		left: 50%;
 		transition: all 0.3s;
-		background-color: white;
+		background-color: black;
 		width: 0px;
 		height: 1.5px;
 		content: '';

@@ -3,7 +3,7 @@ import './Technologies.css';
 function Technologies() {
 	return (
 		<main className="technologies" id="technologies">
-			<h1>Technologies. 🛠️</h1>
+			<h1>Technologies.</h1>
 			<section className="technologies-group">
 				<div className="technologies-images">
 					<img
@@ -38,9 +38,9 @@ function Technologies() {
 					/>
 				</div>
 				<p>
-					For the frontend, I use HTML, CSS, and JavaScript. I incorporate SASS and TypeScript when needed for
-					more maintainable code. React is my framework of choice for its intuitiveness and ability to speed
-					up development.
+					For the <strong>frontend</strong>, I use HTML, CSS, and JavaScript. I incorporate SASS and
+					TypeScript when needed for more maintainable code. React is my framework of choice for its
+					intuitiveness and ability to speed up development.
 				</p>
 			</section>
 			<section className="technologies-group">
@@ -57,8 +57,8 @@ function Technologies() {
 					/>
 				</div>
 				<p>
-					On the backend, I use Node.js/Express to create REST APIs. Endpoints are created for HTTP methods
-					like GET and POST so that the frontend can interact with the database.
+					On the <strong>backend</strong>, I use Node.js/Express to create REST APIs. Endpoints are created
+					for HTTP methods like GET and POST so that the frontend can interact with the database.
 				</p>
 			</section>
 			<section className="technologies-group">
@@ -80,9 +80,9 @@ function Technologies() {
 					/>
 				</div>
 				<p>
-					For databases, I prefer MongoDB for its simplicity in most projects, while Supabase is used for
-					real-time data access when needed. My SQL experience, gained from McMaster's database course,
-					includes writing complex queries and database creation.
+					For <strong>databases</strong>, I prefer MongoDB for its simplicity in most projects, while Supabase
+					is used for real-time data access when needed. My SQL experience, gained from McMaster's database
+					course, includes writing complex queries and database creation.
 				</p>
 			</section>
 			<section className="technologies-group">
@@ -104,9 +104,9 @@ function Technologies() {
 					/>
 				</div>
 				<p>
-					Additionally, at McMaster, I gained proficiency in Python, Java, and C, covering the fundamentals to
-					advanced algorithms such as shortest path and backtracking in Python and Java, and exploring
-					low-level processes like forking and kernel modules in C.
+					In terms of <strong>general languages</strong>, I gained proficiency in Python, Java, and C, at
+					McMaster. Covering the fundamentals to advanced algorithms such as shortest path and backtracking in
+					Python and Java, and exploring low-level processes like forking and kernel modules in C.
 				</p>
 			</section>
 			<section className="technologies-group">
@@ -128,8 +128,9 @@ function Technologies() {
 					/>
 				</div>
 				<p>
-					I also studied Haskell, Prolog, and WebAssembly. While niche, this expanded my understanding of
-					language design and showcases my commitment to learning new things.
+					I also studied <strong>niche languages</strong> like Haskell, Prolog, and WebAssembly. While these
+					aren't often used in the real world, this expanded my understanding of language design and showcases
+					my commitment to learning new things.
 				</p>
 			</section>
 			<section className="technologies-group">
@@ -152,9 +153,9 @@ function Technologies() {
 				</div>
 
 				<p>
-					For quality assurance, I use Jest/JUnit for creating test suites in their respective languages. For
-					end-to-end testing of web pages, I use Selenium to test general user actions like navigation,
-					account creation, and login.
+					For <strong>quality assurance</strong>, I use Jest/JUnit for creating test suites in their
+					respective languages. For end-to-end testing of web pages, I use Selenium to test general user
+					actions like navigation, account creation, and login.
 				</p>
 			</section>
 			<section className="technologies-group">
@@ -176,9 +177,9 @@ function Technologies() {
 					/>
 				</div>
 				<p>
-					Regarding miscellaneous technologies, I use GitHub and Git for version control across all my
-					projects. At McMaster, I utilized the Microsoft Office Suite extensively for tasks such as writing
-					reports/essays, presenting information, and handling data.
+					Regarding <strong>miscellaneous</strong> technologies, I use GitHub and Git for version control
+					across all my projects. At McMaster, I utilized the Microsoft Office Suite extensively for tasks
+					such as writing reports/essays, presenting information, and handling data.
 				</p>
 			</section>
 		</main>

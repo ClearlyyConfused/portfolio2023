@@ -5,7 +5,6 @@ main.technologies {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 20px;
 
 	// backdrop-filter: brightness(0) saturate(100%) invert(85%) sepia(22%) saturate(128%) hue-rotate(227deg)
 	// 	brightness(79%) contrast(90%) opacity(0.3);
@@ -19,8 +18,10 @@ main.technologies {
 	h1 {
 		margin: 0;
 		margin-left: -15px;
+		padding-bottom: 50px;
 		width: calc(80% + variables.$project-column-gap);
 		font-size: 60px;
+		text-align: center;
 		word-break: break-all;
 	}
 
@@ -32,6 +33,9 @@ main.technologies {
 			flex-direction: column;
 		}
 	}
+	.technologies-group:nth-child(8) {
+		padding-bottom: 0px;
+	}
 	.technologies-group {
 		display: flex;
 		flex-wrap: wrap;
@@ -39,6 +43,7 @@ main.technologies {
 		align-items: center;
 		gap: 25px;
 		box-sizing: border-box;
+		padding-bottom: 100px;
 		width: fit-content;
 		height: fit-content;
 
@@ -78,6 +83,8 @@ main.technologies {
 			backdrop-filter: blur(1px);
 			box-sizing: border-box;
 			width: 50%;
+			font-size: 17px;
+			line-height: 1.8;
 		}
 	}
 }

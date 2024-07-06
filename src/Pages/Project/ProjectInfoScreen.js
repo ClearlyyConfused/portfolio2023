@@ -91,7 +91,7 @@ function ProjectInfo({ project, setDisplayInfo }) {
 						</div>
 					</div>
 					<div>
-						<h2>Website</h2>
+						<h2>Deployment</h2>
 						<a target="_blank" rel="noopener noreferrer" href={project.website}>
 							{project.website}
 						</a>
