@@ -6,7 +6,7 @@ function Resume() {
 	return (
 		<main className="resume" id="resume">
 			<section>
-				<h1>Resume.</h1>
+				<h1 className="underline-animation">Resume.</h1>
 				<img src={resumePng} alt="Resume" />
 				<a href={resumePdf} download={'LouisDoan.pdf'}>
 					Download Resume

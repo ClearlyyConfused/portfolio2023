@@ -36,7 +36,7 @@ function Contact() {
 	return (
 		<main className="contact" id="contact">
 			<section>
-				<h1>Contact.</h1>
+				<h1 className="underline-animation">Contact.</h1>
 				<p>Email me at doanl7@mcmaster.ca</p>
 				<form id="contact-form" onSubmit={handleSubmit} method="POST">
 					<input type="hidden" name="access_key" value={process.env.REACT_APP_EMAIL_KEY} />

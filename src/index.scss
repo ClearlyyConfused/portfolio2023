@@ -18,28 +18,174 @@ body {
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.App {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	// gap: 120px; /* gap between sections */
+
+	transition: --myColor2 2s, all 2s;
+
+	/* background gradient and svg */
+	background: linear-gradient(80deg, var(--myColor1) 0%, var(--myColor1) 0%, var(--myColor2) 100%),
+		url('./images/background.svg');
+
+	/* for background to not move with the page, causes issues on mobile */
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
+
+	padding-bottom: 150px;
+
+	main h1,
+	section > p,
+	nav a {
+		transition: color 2s;
+		color: rgb(0, 0, 0) !important;
+	}
+}
+
+@property --myColor1 {
+	syntax: '<color>';
+	initial-value: rgba(252, 247, 245, 0);
+	inherits: false;
+}
+
+@property --myColor2 {
+	syntax: '<color>';
+	initial-value: #c1e2ec;
+	inherits: false;
+}
+
+.App.aboutMeSection {
+	--myColor2: #c1e2ec;
+	transition: --myColor2 2s, all 2s;
+
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
+
+	#about-me {
+		h1:after {
+			left: 25%;
+			width: 50%;
+		}
+	}
+}
+
+.App.techSection {
+	--myColor2: rgba(211, 211, 211, 1);
+	transition: --myColor2 2s, all 2s;
+
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
+
+	#technologies {
+		h1:after {
+			left: 25%;
+			width: 50%;
+		}
+	}
+}
+
+.App.projectSection {
+	--myColor2: #c9e9c4;
+	transition: --myColor2 2s, all 2s;
+
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
+
+	#projects {
+		h1:after {
+			left: 35%;
+			width: 30%;
+		}
+	}
+}
+
+.App.resumeSection {
+	--myColor2: rgba(211, 211, 211, 1);
+	transition: --myColor2 2s, all 2s;
+
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
+	#resume {
+		h1:after {
+			left: 35%;
+			width: 30%;
+		}
+	}
+}
+
+.App.contactSection {
+	--myColor2: #c1e2ec;
+	transition: --myColor2 2s, all 2s;
+
+	@media (min-width: 426px) {
+		background-attachment: fixed;
+	}
+	#contact {
+		h1:after {
+			left: 35%;
+			width: 30%;
+		}
+	}
+}
+
 .App.light-false {
+	/*
 	background-image: linear-gradient(
 			80deg,
 			rgba(252, 247, 245, 0) 0%,
 			rgba(252, 247, 245, 0) 0%,
 			rgba(247, 255, 134, 0.07)
 		),
+		url('./images/background.svg');*/
+
+	background: linear-gradient(80deg, var(--myColor1) 0%, var(--myColor1) 0%, var(--myColor2) 100%),
 		url('./images/background.svg');
+
 	background-color: rgb(17, 17, 27);
 
 	main h1,
 	section > p,
+	#technologies > *,
 	nav a {
+		transition: color 2s;
 		color: rgb(230, 230, 230) !important;
 	}
 
-	.project-filter {
-		> button {
-			color: white;
+	#technologies img {
+		box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.3);
+		background-color: rgba(255, 255, 255, 1);
+		&:hover {
+			box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.5);
 		}
-		> button.active {
-			background-color: #4e575f;
+	}
+
+	#projects {
+		.project-filter {
+			> button {
+				color: white;
+			}
+			> button.active {
+				background-color: #4e575f;
+			}
+		}
+
+		.project {
+			&:hover {
+				> img {
+					box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.5);
+				}
+			}
+		}
+		.project > img {
+			box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.3);
 		}
 	}
 
@@ -72,6 +218,26 @@ body {
 		a {
 			color: white !important;
 		}
+		.sub-images {
+			background-color: black;
+
+			img {
+				border: 2px solid black !important;
+			}
+			img.active {
+				border: 2px solid white !important;
+			}
+		}
+	}
+
+	.full-screen-image-background {
+		div {
+			background-color: rgb(32, 32, 32);
+			> img:first-child {
+				// close icon
+				filter: invert(1);
+			}
+		}
 	}
 
 	nav img {
@@ -79,7 +245,7 @@ body {
 	}
 
 	.underline-animation:after {
-		background-color: white;
+		background-color: white !important;
 	}
 
 	.about-me {
@@ -89,55 +255,9 @@ body {
 	}
 }
 
-.App {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	justify-content: center;
-	// gap: 120px; /* gap between sections */
-
-	transition: --myColor2 2s;
-
-	/* background gradient and svg */
-	background: linear-gradient(80deg, var(--myColor1) 0%, var(--myColor1) 0%, var(--myColor2) 100%),
-		url('./images/background.svg');
-	/*
-	background: linear-gradient(
-		80deg,
-		rgba(252, 247, 245, 0) 0%,
-		rgba(252, 247, 245, 0) 0%,
-		rgba(255, 134, 243, 0.25) 100%
-	);
-	*/
-
-	/* background svg without gradient */
-	/*
-	background-image: linear-gradient(80deg, rgba(252, 247, 245, 0) 0%, rgba(252, 247, 245, 0) 100%),
-		url('./images/background.svg');*/
-
-	/* for background to not move with the page, causes issues on mobile */
-	@media (min-width: 426px) {
-		background-attachment: fixed;
-	}
-
-	padding-bottom: 150px;
-}
-
-@property --myColor1 {
-	syntax: '<color>';
-	initial-value: rgba(252, 247, 245, 0);
-	inherits: false;
-}
-
-@property --myColor2 {
-	syntax: '<color>';
-	initial-value: #c1e2ec;
-	inherits: false;
-}
-
-.App.aboutMeSection {
-	--myColor2: #c1e2ec;
-	transition: --myColor2 2s;
+.App.aboutMeSection.light-false {
+	--myColor2: rgba(171, 222, 237, 0.3);
+	transition: --myColor2 2s, all 2s;
 
 	@media (min-width: 426px) {
 		background-attachment: fixed;
@@ -151,9 +271,9 @@ body {
 	}
 }
 
-.App.techSection {
-	--myColor2: rgba(211, 211, 211, 1);
-	transition: --myColor2 2s;
+.App.techSection.light-false {
+	--myColor2: rgba(211, 211, 211, 0.3);
+	transition: --myColor2 2s, all 2s;
 
 	@media (min-width: 426px) {
 		background-attachment: fixed;
@@ -167,9 +287,9 @@ body {
 	}
 }
 
-.App.projectSection {
-	--myColor2: #c9e9c4;
-	transition: --myColor2 2s;
+.App.projectSection.light-false {
+	--myColor2: rgba(169, 232, 180, 0.3);
+	transition: --myColor2 2s, all 2s;
 
 	@media (min-width: 426px) {
 		background-attachment: fixed;
@@ -183,9 +303,9 @@ body {
 	}
 }
 
-.App.resumeSection {
-	--myColor2: rgba(211, 211, 211, 1);
-	transition: --myColor2 2s;
+.App.resumeSection.light-false {
+	--myColor2: rgba(211, 211, 211, 0.3);
+	transition: --myColor2 2s, all 2s;
 
 	@media (min-width: 426px) {
 		background-attachment: fixed;
@@ -198,9 +318,9 @@ body {
 	}
 }
 
-.App.contactSection {
-	--myColor2: #c1e2ec;
-	transition: --myColor2 2s;
+.App.contactSection.light-false {
+	--myColor2: rgba(171, 222, 237, 0.3);
+	transition: --myColor2 2s, all 2s;
 
 	@media (min-width: 426px) {
 		background-attachment: fixed;

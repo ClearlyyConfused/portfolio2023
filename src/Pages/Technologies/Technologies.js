@@ -3,7 +3,7 @@ import './Technologies.css';
 function Technologies() {
 	return (
 		<main className="technologies" id="technologies">
-			<h1>Technologies.</h1>
+			<h1 className="underline-animation">Technologies.</h1>
 			<section className="technologies-group">
 				<div className="technologies-images">
 					<img

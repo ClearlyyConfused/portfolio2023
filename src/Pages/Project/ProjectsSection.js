@@ -4,7 +4,7 @@ import Project from './Project';
 function ProjectSection({ leftColumnProjects, rightColumnProjects, setYearFilter, yearFilter }) {
 	return (
 		<main className="projects" id="projects">
-			<h1>Projects.</h1>
+			<h1 className="underline-animation">Projects.</h1>
 			<div className="project-filter">
 				<button onClick={() => setYearFilter(0)} className={yearFilter === 0 ? 'active' : ''}>
 					All

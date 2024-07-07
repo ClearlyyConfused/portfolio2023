@@ -5,7 +5,7 @@ function AboutMe() {
 	return (
 		<main id="about-me">
 			<section className="info">
-				<h1>Hey.</h1>
+				<h1 className="underline-animation">Hey.</h1>
 				<p>
 					I'm <strong>Louis</strong>, a <strong>passionate</strong> and <strong>hard-working</strong> student
 					aiming to enter the tech field. My first exposure to programming was in grade 6 when we had to
