@@ -218,14 +218,22 @@ body {
 		a {
 			color: white !important;
 		}
-		.sub-images {
+		.project-image-container {
 			background-color: black;
 
-			img {
-				border: 2px solid black !important;
-			}
-			img.active {
-				border: 2px solid white !important;
+			.sub-images {
+				background-color: black;
+
+				img {
+					box-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);
+					background-color: white;
+					&:hover {
+						box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.8);
+					}
+				}
+				img.active {
+					box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.8);
+				}
 			}
 		}
 	}

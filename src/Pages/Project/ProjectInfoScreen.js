@@ -50,6 +50,7 @@ function ProjectInfo({ project, setDisplayInfo }) {
 					src={closeIcon}
 					alt="close"
 				/>
+				<h1>{project.projectName}</h1>
 				{/* placeholder container so image can load in without moving elements */}
 				<div className="project-image-container">
 					<img
@@ -77,7 +78,6 @@ function ProjectInfo({ project, setDisplayInfo }) {
 					</div>
 				</div>
 				<div className="info">
-					<h1>{project.projectName}</h1>
 					<div>
 						<h2>About</h2>
 						<p>{project.description}</p>

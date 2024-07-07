@@ -75,13 +75,7 @@ const allProjects = [
 		lastUpdated: 2023,
 	},
 	{
-		image: [
-			offcampusMcmaster,
-			offcampusMcmaster2,
-			offcampusMcmaster3,
-			offcampusMcmaster4,
-			offcampusMcmaster5,
-		],
+		image: [offcampusMcmaster, offcampusMcmaster2, offcampusMcmaster3, offcampusMcmaster4],
 		projectName: 'OffCampus McMaster Clone',
 		description: `A clone of McMaster's off-campus housing website. Allows user to upload information about a property and search uploaded properties.`,
 		technologies: ['React', 'SASS', 'Express', 'MongoDB'],
