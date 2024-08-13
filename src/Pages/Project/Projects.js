@@ -4,7 +4,6 @@ import offcampusMcmaster from '../../images/offcampus-mcmaster.png';
 import offcampusMcmaster2 from '../../images/offcampus-mcmaster2.png';
 import offcampusMcmaster3 from '../../images/offcampus-mcmaster3.png';
 import offcampusMcmaster4 from '../../images/offcampus-mcmaster4.png';
-import offcampusMcmaster5 from '../../images/offcampus-mcmaster5.png';
 
 import premierEase from '../../images/premier-ease.png';
 import premierEase2 from '../../images/premier-ease2.png';
@@ -18,8 +17,12 @@ import blabberBox3 from '../../images/blabberbox3.png';
 import connect4fun from '../../images/connect4fun.png';
 import connect4fun2 from '../../images/connect4fun2.png';
 
-import todoList from '../../images/todoList.png';
-import todoList2 from '../../images/todoList2.png';
+import thereeldeal from '../../images/thereeldeal.png';
+import thereeldeal2 from '../../images/thereeldeal2.png';
+import thereeldeal3 from '../../images/thereeldeal3.png';
+import thereeldeal4 from '../../images/thereeldeal4.png';
+import thereeldeal5 from '../../images/thereeldeal5.png';
+import thereeldeal6 from '../../images/thereeldeal6.png';
 
 import battleShip from '../../images/battleship.png';
 import battleShip2 from '../../images/battleship2.png';
@@ -62,6 +65,15 @@ function Projects() {
 }
 
 const allProjects = [
+	{
+		image: [thereeldeal, thereeldeal2, thereeldeal3, thereeldeal4, thereeldeal5, thereeldeal6],
+		projectName: 'The Reel Deal',
+		description: `A website where users can browse detailed movie reviews and see movie ratings.`,
+		technologies: ['Angular', 'SASS', 'FastAPI', 'Psycopg', 'Postgres'],
+		website: 'https://louisdoan9.github.io/todoList/',
+		github: ['https://github.com/louisdoan9/todoList'],
+		lastUpdated: 2024,
+	},
 	{
 		image: [premierEase, premierEase2, premierEase3, premierEase4],
 		projectName: 'Premier Ease',
@@ -117,12 +129,12 @@ const allProjects = [
 		lastUpdated: 2023,
 	},
 	{
-		image: [todoList, todoList2],
-		projectName: '2DO',
-		description: `Todo app that allows users to create projects and then tasks under each project.`,
-		technologies: ['HTML', 'CSS', 'JavaScript'],
-		website: 'https://louisdoan9.github.io/todoList/',
-		github: ['https://github.com/louisdoan9/todoList'],
+		image: [battleShip, battleShip2],
+		projectName: 'BattleShip',
+		description: `Simple game of battleship vs an AI. AI has difficulty setting that makes it more/less likely to hit the user's ship.`,
+		technologies: ['HTML', 'CSS', 'JavaScript', 'Jest'],
+		website: 'https://louisdoan9.github.io/battleship/',
+		github: ['https://github.com/louisdoan9/battleship'],
 		lastUpdated: 2022,
 	},
 	{
@@ -132,15 +144,6 @@ const allProjects = [
 		technologies: ['HTML', 'CSS', 'JavaScript'],
 		website: 'https://louisdoan9.github.io/Etch-a-Sketch/',
 		github: ['https://github.com/louisdoan9/Etch-a-Sketch'],
-		lastUpdated: 2022,
-	},
-	{
-		image: [battleShip, battleShip2],
-		projectName: 'BattleShip',
-		description: `Simple game of battleship vs an AI. AI has difficulty setting that makes it more/less likely to hit the user's ship.`,
-		technologies: ['HTML', 'CSS', 'JavaScript', 'Jest'],
-		website: 'https://louisdoan9.github.io/battleship/',
-		github: ['https://github.com/louisdoan9/battleship'],
 		lastUpdated: 2022,
 	},
 ];

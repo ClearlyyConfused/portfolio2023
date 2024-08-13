@@ -9,6 +9,9 @@ function ProjectSection({ leftColumnProjects, rightColumnProjects, setYearFilter
 				<button onClick={() => setYearFilter(0)} className={yearFilter === 0 ? 'active' : ''}>
 					All
 				</button>
+				<button onClick={() => setYearFilter(2024)} className={yearFilter === 2024 ? 'active' : ''}>
+					2024
+				</button>
 				<button onClick={() => setYearFilter(2023)} className={yearFilter === 2023 ? 'active' : ''}>
 					2023
 				</button>
