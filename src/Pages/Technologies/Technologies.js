@@ -36,13 +36,18 @@ function Technologies() {
 						alt="TypeScript"
 						title="TypeScript"
 					/>
+					<img
+						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+						alt="Angular"
+						title="Angular"
+					/>
 				</div>
 				<div className="technologies-info">
 					<h2>Frontend</h2>
 					<p>
 						For the frontend, I use HTML, CSS, and JavaScript. I incorporate SASS and TypeScript when needed
-						for more maintainable code. React is my framework of choice for its intuitiveness and ability to
-						speed up development.
+						for more maintainable code. React and Angular are my frameworks of choice for their intuitiveness
+						and ability to speed up development.
 					</p>
 				</div>
 			</section>
@@ -58,12 +63,17 @@ function Technologies() {
 						alt="Express"
 						title="Express"
 					/>
+					<img
+						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg"
+						alt="FastAPI"
+						title="FastAPI"
+					/>
 				</div>
 				<div className="technologies-info">
 					<h2>Backend</h2>
 					<p>
-						On the backend, I use Node.js/Express to create REST APIs. Endpoints are created for HTTP methods
-						like GET and POST so that the frontend can interact with the database.
+						On the backend, I use Node.js/Express to create REST APIs in JavaScript. If the preferred language
+						is Python, FastAPI along with the Psycopg library to interact with databases is my choice.
 					</p>
 				</div>
 			</section>
@@ -80,17 +90,17 @@ function Technologies() {
 						title="Supabase"
 					/>
 					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
-						alt="SQL"
-						title="SQL"
+						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg"
+						alt="PostgreSQL"
+						title="PostgreSQL"
 					/>
 				</div>
 				<div className="technologies-info">
 					<h2>Databases</h2>
 					<p>
 						For databases, I prefer MongoDB for its simplicity in most projects, while Supabase is used for
-						real-time data access when needed. My SQL experience, gained from McMaster's database course,
-						includes writing complex queries and database creation.
+						real-time data access when needed. When complex queries or tables are needed, PostgreSQL is my
+						choice.
 					</p>
 				</div>
 			</section>
@@ -192,13 +202,19 @@ function Technologies() {
 						alt="MS Office"
 						title="MS Office"
 					/>
+					<img
+						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+						alt="Azure"
+						title="Azure"
+					/>
 				</div>
 				<div className="technologies-info">
 					<h2>Miscellaneous</h2>
 					<p>
 						Regarding miscellaneous technologies, I use GitHub and Git for version control across all my
 						projects. At McMaster, I utilized the Microsoft Office Suite extensively for tasks such as writing
-						reports/essays, presenting information, and handling data.
+						reports/essays, presenting information, and handling data. MS Azure is used for creating container
+						apps.
 					</p>
 				</div>
 			</section>
