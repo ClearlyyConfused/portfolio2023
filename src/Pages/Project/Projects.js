@@ -70,8 +70,8 @@ const allProjects = [
 		projectName: 'The Reel Deal',
 		description: `A website where users can browse detailed movie reviews and see movie ratings.`,
 		technologies: ['Angular', 'SASS', 'FastAPI', 'Psycopg', 'Postgres'],
-		website: 'https://louisdoan9.github.io/todoList/',
-		github: ['https://github.com/louisdoan9/todoList'],
+		website: 'https://the-reel-deal.vercel.app/',
+		github: ['https://github.com/louisdoan9/TheReelDeal', 'https://github.com/louisdoan9/TheReelDealBackend'],
 		lastUpdated: 2024,
 	},
 	{
