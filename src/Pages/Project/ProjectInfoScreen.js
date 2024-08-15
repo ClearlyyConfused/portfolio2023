@@ -90,12 +90,16 @@ function ProjectInfo({ project, setDisplayInfo }) {
 							})}
 						</div>
 					</div>
-					<div>
-						<h2>Deployment</h2>
-						<a target="_blank" rel="noopener noreferrer" href={project.website}>
-							{project.website}
-						</a>
-					</div>
+					{project.website !== '' ? (
+						<div>
+							<h2>Deployment</h2>
+							<a target="_blank" rel="noopener noreferrer" href={project.website}>
+								{project.website}
+							</a>
+						</div>
+					) : (
+						''
+					)}
 					<div>
 						<h2>Github</h2>
 						<div className="github-links">

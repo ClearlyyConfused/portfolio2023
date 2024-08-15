@@ -24,15 +24,15 @@ import thereeldeal4 from '../../images/thereeldeal4.png';
 import thereeldeal5 from '../../images/thereeldeal5.png';
 import thereeldeal6 from '../../images/thereeldeal6.png';
 
-import battleShip from '../../images/battleship.png';
-import battleShip2 from '../../images/battleship2.png';
+import ratmaze from '../../images/ratmaze.png';
+import ratmaze2 from '../../images/ratmaze2.png';
 
 import treeter from '../../images/treeter.png';
 import treeter2 from '../../images/treeter2.png';
 import treeter3 from '../../images/treeter3.png';
 
-import etchSketch from '../../images/etch-a-sketch.png';
-import etchSketch2 from '../../images/etch-a-sketch2.png';
+import shortestpath from '../../images/shortestpath.png';
+import shortestpath2 from '../../images/shortestpath2.png';
 
 import { useState } from 'react';
 
@@ -129,22 +129,22 @@ const allProjects = [
 		lastUpdated: 2023,
 	},
 	{
-		image: [battleShip, battleShip2],
-		projectName: 'BattleShip',
-		description: `Simple game of battleship vs an AI. AI has difficulty setting that makes it more/less likely to hit the user's ship.`,
-		technologies: ['HTML', 'CSS', 'JavaScript', 'Jest'],
-		website: 'https://louisdoan9.github.io/battleship/',
-		github: ['https://github.com/louisdoan9/battleship'],
-		lastUpdated: 2022,
+		image: [ratmaze, ratmaze2],
+		projectName: 'Rat Maze',
+		description: `A backtracking algorithm where users can find a path from a starting position to the end of an inputted maze.`,
+		technologies: ['Java', 'Java Swing'],
+		website: '',
+		github: ['https://github.com/louisdoan9/ratmaze'],
+		lastUpdated: 2024,
 	},
 	{
-		image: [etchSketch, etchSketch2],
-		projectName: 'Etch-A-Sketch',
-		description: `An etch-a-sketch that allows users to add colored squared to a board. User can also change number of squares board contains.`,
-		technologies: ['HTML', 'CSS', 'JavaScript'],
-		website: 'https://louisdoan9.github.io/Etch-a-Sketch/',
-		github: ['https://github.com/louisdoan9/Etch-a-Sketch'],
-		lastUpdated: 2022,
+		image: [shortestpath, shortestpath2],
+		projectName: 'Shortest Path Analysis',
+		description: `Collaborated in a team of three to implement, analyze, and compare the shortest path algorithms: Dijkstra's, Bellman-Ford, and A*.`,
+		technologies: ['Python'],
+		website: '',
+		github: ['https://github.com/louisdoan9/shortestPathAnalysis'],
+		lastUpdated: 2023,
 	},
 ];
 
